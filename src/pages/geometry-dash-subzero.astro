@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import GameIframe from '../components/GameIframe.astro';
 import RatingWidget from '../components/RatingWidget.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -44,7 +43,7 @@ const gameSchema = {
   description="Play Geometry Dash SubZero online for free! A winter-themed spin-off with icy levels and cool music. Unblocked, no download required. Play now!"
   keywords="geometry dash subzero, geometry dash subzero online, geometry dash subzero unblocked, play geometry dash subzero free"
   jsonLd={[gameSchema]}
-  ogImage="/assets/icons/geometrydash-subzero-cover.png"
+  ogImage="/assets/covers/geometrydash-subzero-cover.png"
 >
   <Header />
   
@@ -68,20 +67,14 @@ const gameSchema = {
           </div>
         </header>
         
-        <div class="game-section">
-          <div class="cover-image">
-            <img src="/assets/covers/geometrydash-subzero-cover.png" alt="Geometry Dash SubZero Gameplay" width="800" height="450" />
-          </div>
-          <GameIframe
-            src="https://1games.io/game/geometry-dash-subzero/"
-            title="Play Geometry Dash SubZero Online Free"
-            description="Experience Geometry Dash SubZero with winter-themed levels and music directly in your browser."
-          />
-        </div>
-        
         <section class="article-content">
           <h2>What is Geometry Dash SubZero?</h2>
           <p>Geometry Dash SubZero is a winter-themed spin-off of the original Geometry Dash. It features icy levels with a cool visual theme, unique music tracks, and the same addictive rhythm-platformer gameplay. If you love the original game and want a fresh seasonal experience, SubZero is perfect for you.</p>
+
+          <figure class="article-image">
+            <img src="/assets/covers/geometrydash-subzero-cover.png" alt="Geometry Dash SubZero Gameplay - Winter Theme" width="800" height="450" />
+            <figcaption>Geometry Dash SubZero features a stunning winter-themed aesthetic</figcaption>
+          </figure>
           
           <h2>Winter Theme Features</h2>
           <ul>
@@ -167,28 +160,6 @@ const gameSchema = {
     margin: 2rem 0;
   }
 
-  .game-section {
-    margin: 3rem 0;
-  }
-
-  .cover-image {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
-  }
-
-  .cover-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .cover-image:hover img {
-    transform: scale(1.02);
-  }
-
   .article-content {
     margin-top: 3rem;
   }
@@ -214,5 +185,33 @@ const gameSchema = {
   .article-content li {
     margin-bottom: 0.75rem;
     line-height: 1.8;
+  }
+
+  .article-image {
+    margin: 2.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
+    border: 2px solid var(--purple);
+  }
+
+  .article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .article-image:hover img {
+    transform: scale(1.02);
+  }
+
+  .article-image figcaption {
+    padding: 1rem;
+    background-color: var(--dark-secondary);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
   }
 </style>

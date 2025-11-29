@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import GameIframe from '../components/GameIframe.astro';
 import RatingWidget from '../components/RatingWidget.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -44,7 +43,7 @@ const gameSchema = {
   description="Play Geometry Dash Meltdown online for free! A spin-off with new levels, music, and visual themes. Unblocked, no download required. Play now!"
   keywords="geometry dash meltdown, geometry dash meltdown online, geometry dash meltdown unblocked, play geometry dash meltdown free"
   jsonLd={[gameSchema]}
-  ogImage="/assets/icons/geometrydash-meltdown-cover.png"
+  ogImage="/assets/covers/geometrydash-meltdown-cover.png"
 >
   <Header />
   
@@ -68,20 +67,14 @@ const gameSchema = {
           </div>
         </header>
         
-        <div class="game-section">
-          <div class="cover-image">
-            <img src="/assets/covers/geometrydash-meltdown-cover.png" alt="Geometry Dash Meltdown Gameplay" width="800" height="450" />
-          </div>
-          <GameIframe
-            src="https://geometrydashgame.com/gd-proxy/index.html"
-            title="Play Geometry Dash Meltdown Online Free"
-            description="Experience Geometry Dash Meltdown with new levels and music directly in your browser."
-          />
-        </div>
-        
         <section class="article-content">
           <h2>What is Geometry Dash Meltdown?</h2>
           <p>Geometry Dash Meltdown is a spin-off of the original Geometry Dash game. While it maintains the core rhythm-platformer mechanics, it introduces completely new levels, original music tracks, and unique visual themes. If you've mastered the original game, Meltdown offers fresh challenges with a different flavor.</p>
+
+          <figure class="article-image">
+            <img src="/assets/covers/geometrydash-meltdown-cover.png" alt="Geometry Dash Meltdown Gameplay" width="800" height="450" />
+            <figcaption>Geometry Dash Meltdown brings new levels and music to the classic formula</figcaption>
+          </figure>
           
           <h2>New Content in Meltdown</h2>
           <ul>
@@ -167,28 +160,6 @@ const gameSchema = {
     margin: 2rem 0;
   }
 
-  .game-section {
-    margin: 3rem 0;
-  }
-
-  .cover-image {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
-  }
-
-  .cover-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .cover-image:hover img {
-    transform: scale(1.02);
-  }
-
   .article-content {
     margin-top: 3rem;
   }
@@ -214,5 +185,33 @@ const gameSchema = {
   .article-content li {
     margin-bottom: 0.75rem;
     line-height: 1.8;
+  }
+
+  .article-image {
+    margin: 2.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
+    border: 2px solid var(--purple);
+  }
+
+  .article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .article-image:hover img {
+    transform: scale(1.02);
+  }
+
+  .article-image figcaption {
+    padding: 1rem;
+    background-color: var(--dark-secondary);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
   }
 </style>

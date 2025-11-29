@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import GameIframe from '../components/GameIframe.astro';
 import RatingWidget from '../components/RatingWidget.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -15,7 +14,7 @@ const gameSchema = {
   "@context": "https://schema.org",
   "@type": "VideoGame",
   "name": "Geometry Dash Lite",
-  "description": "Play Geometry Dash Lite online for free. A free version of the iconic rhythm-based platformer with limited levels. Unblocked and ready to play!",
+  "description": "Play Geometry Dash Lite online for free. A free version with curated levels perfect for beginners. Unblocked and ready to play!",
   "genre": ["Platformer", "Rhythm", "Action"],
   "gamePlatform": ["Web Browser", "Online"],
   "applicationCategory": "Game",
@@ -41,10 +40,10 @@ const gameSchema = {
 
 <BaseLayout
   title="Geometry Dash Lite – Play Free Online"
-  description="Play Geometry Dash Lite online for free! A free version of the rhythm-based platformer with limited levels. Unblocked, no download required. Play now!"
+  description="Play Geometry Dash Lite online for free! A free version with curated levels perfect for beginners. Unblocked, no download required. Play now!"
   keywords="geometry dash lite, geometry dash lite online, geometry dash lite unblocked, play geometry dash lite free"
   jsonLd={[gameSchema]}
-  ogImage="/assets/icons/geometrydash-lite-cover.png"
+  ogImage="/assets/covers/geometrydash-lite-cover.png"
 >
   <Header />
   
@@ -60,7 +59,7 @@ const gameSchema = {
           <h1>Geometry Dash Lite – Play Free Online</h1>
           
           <div class="game-intro">
-            <p><strong>Geometry Dash Lite</strong> is the free version of the iconic rhythm-based platformer. Jump, fly, and dash through challenging levels with energetic music. Perfect for beginners and casual players!</p>
+            <p><strong>Geometry Dash Lite</strong> is the free version of the popular Geometry Dash game. It features a curated selection of levels perfect for players who want to experience the core gameplay without purchasing the full version. The lite version maintains all the exciting mechanics and challenging gameplay that made Geometry Dash famous.</p>
           </div>
           
           <div class="rating-section">
@@ -68,56 +67,58 @@ const gameSchema = {
           </div>
         </header>
         
-        <div class="game-section">
-          <div class="cover-image">
-            <img src="/assets/covers/geometrydash-lite-cover.png" alt="Geometry Dash Lite Gameplay" width="800" height="450" />
-          </div>
-          <GameIframe
-            src="https://geometrydashgame.com/proxy/lite/"
-            title="Play Geometry Dash Lite Online Free"
-            description="Experience Geometry Dash Lite with a curated selection of levels directly in your browser."
-          />
-        </div>
-        
         <section class="article-content">
           <h2>What is Geometry Dash Lite?</h2>
           <p>Geometry Dash Lite is the free version of the popular Geometry Dash game. It features a limited selection of levels perfect for players who want to experience the core gameplay without purchasing the full version. The lite version maintains all the exciting mechanics and challenging gameplay that made Geometry Dash famous.</p>
+
+          <figure class="article-image">
+            <img src="/assets/covers/geometrydash-lite-cover.png" alt="Geometry Dash Lite Gameplay - Free Version" width="800" height="450" />
+            <figcaption>Geometry Dash Lite offers the same addictive gameplay as the full version</figcaption>
+          </figure>
           
           <h2>Key Features of Geometry Dash Lite</h2>
           <ul>
-            <li><strong>Free to Play:</strong> No payment required, just open and play</li>
-            <li><strong>Limited Levels:</strong> A curated selection of levels for beginners and intermediate players</li>
-            <li><strong>Multiple Game Modes:</strong> Cube, ship, ball, UFO, wave, and more</li>
-            <li><strong>Practice Mode:</strong> Place checkpoints to learn difficult sections</li>
-            <li><strong>Customization:</strong> Unlock icons and colors as you progress</li>
-            <li><strong>Energetic Soundtrack:</strong> Electronic music synchronized with gameplay</li>
+            <li><strong>Free to play:</strong> No cost, no in-app purchases, completely free</li>
+            <li><strong>Curated levels:</strong> Handpicked levels that provide a great introduction to the game</li>
+            <li><strong>Responsive controls:</strong> One-button gameplay that's easy to learn but hard to master</li>
+            <li><strong>Challenging difficulty:</strong> Levels that gradually increase in difficulty</li>
+            <li><strong>Catchy music:</strong> Synchronized soundtrack that matches the gameplay</li>
+            <li><strong>Customization:</strong> Unlock new icons and colors as you progress</li>
           </ul>
           
           <h2>How to Play Geometry Dash Lite</h2>
-          <p>The controls are simple: press spacebar, click the mouse, or tap the screen to jump. Your cube moves automatically from left to right. Your job is to jump at the right moment to avoid spikes, gaps, and obstacles. Each level is synchronized with music, so timing is everything.</p>
+          <p>Playing Geometry Dash Lite is simple: tap or click to make your cube jump. Your character moves automatically from left to right, and you need to time your jumps perfectly to avoid obstacles. The game is all about rhythm and timing.</p>
           
-          <p>When you crash, you restart from the beginning or from a checkpoint in practice mode. There's no time limit—try as many times as you need to beat the level. The more you play, the more you memorize the patterns and improve your timing.</p>
+          <p>Each level is synchronized with music, so listening to the beat helps you anticipate where obstacles will appear. Practice mode allows you to place checkpoints and learn difficult sections without restarting from the beginning every time.</p>
           
           <h2>Difficulty Progression</h2>
-          <p>Geometry Dash Lite starts with easier levels to teach you the basics. As you progress, new mechanics appear: gravity portals, speed boosters, jump pads, and shape transformations. Each new level introduces something slightly more complex than the previous one.</p>
+          <p>Geometry Dash Lite features a well-balanced difficulty curve. Early levels teach you the basics with simple jumps and straightforward obstacles. As you progress, new mechanics are introduced: gravity portals, speed changes, and character transformations.</p>
           
-          <h2>Why Play Geometry Dash Lite?</h2>
-          <p>If you're new to Geometry Dash, the lite version is the perfect starting point. It's completely free, loads instantly in your browser, and gives you a real taste of what makes the game so addictive. Many players use it to practice before trying the full version.</p>
+          <p>The later levels in Lite are challenging but fair, providing a good stepping stone before moving to the full version of Geometry Dash. Each level teaches you something new about the game's mechanics.</p>
+          
+          <h2>Game Modes and Transformations</h2>
+          <p>Like the full version, Geometry Dash Lite features multiple game modes where your cube transforms into different shapes. Each form has unique physics and controls that you need to master. The cube, ship, ball, and other forms all behave differently, adding variety to the gameplay.</p>
+          
+          <h2>Practice Mode</h2>
+          <p>Stuck on a difficult section? Use practice mode to place checkpoints and practice specific parts of a level without restarting from the beginning. This feature is essential for learning tough sequences and improving your consistency.</p>
+          
+          <h2>Customization and Unlockables</h2>
+          <p>As you progress through Geometry Dash Lite, unlock new icons, colors, and visual customization options. Personalize your character to make it uniquely yours while you master the challenging levels.</p>
+          
+          <h2>Why Choose Geometry Dash Lite?</h2>
+          <p>If you're new to Geometry Dash, Lite is the perfect starting point. It's completely free, requires no download, and provides enough content to understand if you'll enjoy the full game. Many players use Lite to practice before moving to the more challenging full version.</p>
           
           <h2>Tips for Success</h2>
           <ul>
-            <li>Don't spam jumps—every tap should be intentional</li>
-            <li>Use headphones to hear the beat clearly</li>
-            <li>Start with easier levels before attempting harder ones</li>
-            <li>Use practice mode to study sections that always kill you</li>
-            <li>Take breaks if you feel frustrated—your focus will improve after rest</li>
+            <li>Listen carefully to the music—obstacles sync with the beat</li>
+            <li>Don't rush; focus on consistency over speed</li>
+            <li>Use practice mode extensively to learn difficult sections</li>
+            <li>Watch how each game mode behaves before attempting hard levels</li>
+            <li>Take breaks to maintain focus and avoid frustration</li>
           </ul>
           
-          <h2>Geometry Dash Lite vs Full Version</h2>
-          <p>The lite version includes fewer levels than the full game, but the core gameplay is identical. Both versions feature the same responsive controls, challenging mechanics, and satisfying progression. The lite version is ideal if you want to test the game or prefer a shorter experience.</p>
-          
-          <h2>Free to Play, No Downloads</h2>
-          <p>Play Geometry Dash Lite directly in your browser on geometrydash.ie. No installation, no registration, and no hidden fees. Just open the game and start jumping. Your progress is saved locally in your browser.</p>
+          <h2>Free to Play Online</h2>
+          <p>Geometry Dash Lite is completely free to play on geometrydash.ie. No downloads, no registration, and no hidden costs. Just open your browser and start playing instantly.</p>
         </section>
       </article>
     </div>
@@ -164,28 +165,6 @@ const gameSchema = {
     margin: 2rem 0;
   }
 
-  .game-section {
-    margin: 3rem 0;
-  }
-
-  .cover-image {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
-  }
-
-  .cover-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .cover-image:hover img {
-    transform: scale(1.02);
-  }
-
   .article-content {
     margin-top: 3rem;
   }
@@ -211,5 +190,33 @@ const gameSchema = {
   .article-content li {
     margin-bottom: 0.75rem;
     line-height: 1.8;
+  }
+
+  .article-image {
+    margin: 2.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
+    border: 2px solid var(--purple);
+  }
+
+  .article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .article-image:hover img {
+    transform: scale(1.02);
+  }
+
+  .article-image figcaption {
+    padding: 1rem;
+    background-color: var(--dark-secondary);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
   }
 </style>

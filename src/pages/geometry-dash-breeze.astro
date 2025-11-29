@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import GameIframe from '../components/GameIframe.astro';
 import RatingWidget from '../components/RatingWidget.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -44,7 +43,7 @@ const gameSchema = {
   description="Play Geometry Dash Breeze online for free! A light-hearted spin-off with colorful levels and upbeat music. Unblocked, no download required. Play now!"
   keywords="geometry dash breeze, geometry dash breeze online, geometry dash breeze unblocked, play geometry dash breeze free"
   jsonLd={[gameSchema]}
-  ogImage="/assets/icons/geometrydash-breeze.png"
+  ogImage="/assets/covers/geometrydash-breeze.png"
 >
   <Header />
   
@@ -68,20 +67,14 @@ const gameSchema = {
           </div>
         </header>
         
-        <div class="game-section">
-          <div class="cover-image">
-            <img src="/assets/covers/geometrydash-breeze.png" alt="Geometry Dash Breeze Gameplay" width="800" height="450" />
-          </div>
-          <GameIframe
-            src="https://1games.io/game/geometry-dash-breeze/"
-            title="Play Geometry Dash Breeze Online Free"
-            description="Experience Geometry Dash Breeze with colorful levels and upbeat music directly in your browser."
-          />
-        </div>
-        
         <section class="article-content">
           <h2>What is Geometry Dash Breeze?</h2>
           <p>Geometry Dash Breeze is a vibrant and playful spin-off of the original Geometry Dash. It maintains the core rhythm-platformer mechanics while introducing a lighter, more colorful aesthetic. With upbeat music and cheerful level design, Breeze offers a refreshing take on the Geometry Dash formula.</p>
+
+          <figure class="article-image">
+            <img src="/assets/covers/geometrydash-breeze.png" alt="Geometry Dash Breeze Gameplay - Colorful Version" width="800" height="450" />
+            <figcaption>Geometry Dash Breeze brings vibrant colors and upbeat music to the classic gameplay</figcaption>
+          </figure>
           
           <h2>Colorful Features</h2>
           <ul>
@@ -170,28 +163,6 @@ const gameSchema = {
     margin: 2rem 0;
   }
 
-  .game-section {
-    margin: 3rem 0;
-  }
-
-  .cover-image {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
-  }
-
-  .cover-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .cover-image:hover img {
-    transform: scale(1.02);
-  }
-
   .article-content {
     margin-top: 3rem;
   }
@@ -217,5 +188,33 @@ const gameSchema = {
   .article-content li {
     margin-bottom: 0.75rem;
     line-height: 1.8;
+  }
+
+  .article-image {
+    margin: 2.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
+    border: 2px solid var(--purple);
+  }
+
+  .article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .article-image:hover img {
+    transform: scale(1.02);
+  }
+
+  .article-image figcaption {
+    padding: 1rem;
+    background-color: var(--dark-secondary);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
   }
 </style>

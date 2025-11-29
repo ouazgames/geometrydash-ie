@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import GameIframe from '../components/GameIframe.astro';
 import RatingWidget from '../components/RatingWidget.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -70,7 +69,7 @@ const faqSchema = {
   description="Play Geometry Dash online for free! Experience the rhythm-based platformer game with challenging levels. Unblocked, no download required. Play now!"
   keywords="geometry dash, geometry dash online, geometry dash unblocked, play geometry dash free"
   jsonLd={[gameSchema, faqSchema]}
-  ogImage="/assets/icons/geometrydash-cover.png"
+  ogImage="/assets/covers/geometrydash-cover.png"
 >
   <Header />
   
@@ -92,17 +91,6 @@ const faqSchema = {
           </div>
         </header>
         
-        <div class="game-section">
-          <div class="cover-image">
-            <img src="/assets/covers/geometrydash-cover.png" alt="Geometry Dash Gameplay" width="800" height="450" />
-          </div>
-          <GameIframe
-            src="https://geometrydashgame.com/wp-content/uploads/games/uploads/html5/geometry-dash-game/index.html"
-            title="Play Geometry Dash Online Free"
-            description="Experience the full Geometry Dash game directly in your browser. Jump, fly, and flip your way through dangerous passages and spiky obstacles."
-          />
-        </div>
-        
         <section class="article-content">
           <h2>About Geometry Dash</h2>
           
@@ -110,6 +98,11 @@ const faqSchema = {
           <p>Geometry Dash is a fast-paced platform game where you control a small cube that moves automatically from left to right. Your only job is to tap or click at the right moment to jump over spikes, gaps, and dangerous obstacles. There is no way to slow down or stop, so timing is everything.</p>
           
           <p>Each level is synchronized with an energetic soundtrack. Obstacles always appear in the same place, so repetition is part of the design. The more you play a level, the more you memorize the patterns. This mix of rhythm and memory makes Geometry Dash easy to understand but hard to master.</p>
+
+          <figure class="article-image">
+            <img src="/assets/covers/geometrydash-cover.png" alt="Geometry Dash Gameplay - Rhythm Platformer" width="800" height="450" />
+            <figcaption>Geometry Dash combines rhythm and platforming in one addictive game</figcaption>
+          </figure>
           
           <p>As you progress, new mechanics appear: portals that change gravity, speed boosters, jump pads, and platforms that move or disappear. Sometimes the cube transforms into a ship, a ball, a UFO, or a wave, and each form has its own physics and controls.</p>
           
@@ -326,28 +319,6 @@ const faqSchema = {
     margin: 2rem 0;
   }
 
-  .game-section {
-    margin: 3rem 0;
-  }
-
-  .cover-image {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
-  }
-
-  .cover-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .cover-image:hover img {
-    transform: scale(1.02);
-  }
-
   .article-content {
     margin-top: 3rem;
   }
@@ -396,6 +367,34 @@ const faqSchema = {
     border: none;
     border-top: 2px solid var(--dark-secondary);
     margin: 3rem 0;
+  }
+
+  .article-image {
+    margin: 2.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(74, 246, 38, 0.2);
+    border: 2px solid var(--purple);
+  }
+
+  .article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .article-image:hover img {
+    transform: scale(1.02);
+  }
+
+  .article-image figcaption {
+    padding: 1rem;
+    background-color: var(--dark-secondary);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.6;
   }
 
   .other-games {
