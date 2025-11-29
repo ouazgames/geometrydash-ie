@@ -10,6 +10,24 @@ const breadcrumbItems = [
   { name: 'Home', url: '/' }
 ];
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Geometry Dash IE",
+  "url": "https://geometrydash.ie",
+  "logo": "https://geometrydash.ie/assets/icons/geometrydash-icon.webp",
+  "description": "Free online Geometry Dash games - Play Geometry Dash, Lite, Meltdown, SubZero, and Breeze online for free",
+  "sameAs": [
+    "https://twitter.com/geometrydash",
+    "https://www.youtube.com/c/geometrydash"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "url": "https://geometrydash.ie/contact"
+  }
+};
+
 const gameSchema = {
   "@context": "https://schema.org",
   "@type": "VideoGame",
@@ -44,6 +62,20 @@ const gameSchema = {
   "inLanguage": "en"
 };
 
+const webApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Geometry Dash Online",
+  "url": "https://geometrydash.ie",
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "operatingSystem": "Web Browser"
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -53,7 +85,7 @@ const faqSchema = {
       "name": "Is Geometry Dash free to play online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, Geometry Dash is completely free to play online through your web browser. No downloads or installations required."
+        "text": "Yes, Geometry Dash is completely free to play online through your web browser. No downloads or installations required. Play instantly on geometrydash.ie."
       }
     },
     {
@@ -61,7 +93,7 @@ const faqSchema = {
       "name": "What is Geometry Dash?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Geometry Dash is a rhythm-based platformer game where you control a geometric shape through various obstacle-filled levels synchronized with music."
+        "text": "Geometry Dash is a rhythm-based platformer game where you control a geometric shape through various obstacle-filled levels synchronized with music. It combines fast-paced gameplay with musical synchronization for an addictive experience."
       }
     },
     {
@@ -69,7 +101,7 @@ const faqSchema = {
       "name": "Can I play Geometry Dash on mobile?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, Geometry Dash is available on mobile devices (iOS and Android) and can also be played in your browser on any device."
+        "text": "Yes, Geometry Dash is available on mobile devices (iOS and Android) and can also be played in your browser on any device including smartphones and tablets."
       }
     },
     {
@@ -77,7 +109,7 @@ const faqSchema = {
       "name": "How many levels are in Geometry Dash?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The full version of Geometry Dash includes many official levels with varying difficulty, plus thousands of community-created levels."
+        "text": "The full version of Geometry Dash includes many official levels with varying difficulty, plus thousands of community-created levels for endless gameplay."
       }
     },
     {
@@ -85,7 +117,15 @@ const faqSchema = {
       "name": "Is Geometry Dash difficult?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Geometry Dash starts easy with simple tutorials but becomes progressively more challenging. Difficulty ranges from easy to extremely hard levels."
+        "text": "Geometry Dash starts easy with simple tutorials but becomes progressively more challenging. Difficulty ranges from easy to extremely hard levels, suitable for all skill levels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the different Geometry Dash versions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are five main versions: Geometry Dash (original), Geometry Dash Lite (beginner-friendly), Geometry Dash Meltdown (dark-themed), Geometry Dash SubZero (winter-themed), and Geometry Dash Breeze (colorful version)."
       }
     }
   ]
@@ -103,13 +143,26 @@ const breadcrumbSchema = {
     }
   ]
 };
+
+const tableOfContents = [
+  { id: "what-is-geometry-dash", title: "What is Geometry Dash?" },
+  { id: "how-to-play", title: "How to Play Geometry Dash" },
+  { id: "gameplay-mechanics", title: "Gameplay Mechanics" },
+  { id: "game-modes", title: "Game Modes and Character Forms" },
+  { id: "difficulty-levels", title: "Difficulty Levels" },
+  { id: "tips-and-tricks", title: "Tips and Tricks" },
+  { id: "geometry-dash-versions", title: "Geometry Dash Versions" },
+  { id: "controls", title: "Game Controls" },
+  { id: "features", title: "Key Features" },
+  { id: "faq", title: "Frequently Asked Questions" }
+];
 ---
 
 <BaseLayout
-  title="Geometry Dash – Play Online Free (Unblocked Game)"
-  description="Play Geometry Dash online for free! Experience the ultimate rhythm-based platformer with challenging levels. Unblocked, no download required. Play now!"
-  keywords="geometry dash, geometry dash online, geometry dash unblocked, play geometry dash free, rhythm platformer game"
-  jsonLd={[gameSchema, faqSchema, breadcrumbSchema]}
+  title="Geometry Dash Online – Play Free Rhythm Platformer Game"
+  description="Play Geometry Dash online for free! A rhythm-based platformer with challenging levels and addictive gameplay. No download required. Play now on geometrydash.ie!"
+  keywords="geometry dash online, geometry dash free, play geometry dash, geometry dash game, rhythm platformer"
+  jsonLd={[organizationSchema, gameSchema, webApplicationSchema, faqSchema, breadcrumbSchema]}
   ogImage="/assets/covers/geometrydash-cover.png"
 >
   <Header />
@@ -120,10 +173,19 @@ const breadcrumbSchema = {
       
       <article class="game-page">
         <header class="game-header">
-          <h1>Geometry Dash – Play Online Free (Unblocked Game)</h1>
+          <div class="game-icon">
+            <img 
+              src="/assets/icons/geometrydash-icon.webp" 
+              alt="Geometry Dash game icon - green square with blue center" 
+              width="120" 
+              height="120" 
+              loading="lazy" 
+            />
+          </div>
+          <h1>Geometry Dash – Play Free Online Rhythm Platformer</h1>
           
           <div class="game-intro">
-            <p><strong>Play Geometry Dash online for free</strong> and test your timing, focus, and reflexes in one of the most iconic rhythm platformers ever created. Jump, fly, and dash through neon levels full of spikes, saws, and tricky jumps while the electronic soundtrack keeps the pace. On <strong>geometrydash.ie</strong> you can enjoy Geometry Dash directly in your browser with no download, no registration, and no extra setup required.</p>
+            <p><strong>Geometry Dash</strong> is the ultimate rhythm-based platformer game that combines fast-paced action with musical synchronization. Control your geometric character through obstacle-filled levels, time your jumps perfectly to the beat, and experience one of the most addictive games ever created. Play free online on geometrydash.ie with no downloads required.</p>
           </div>
           
           <div class="rating-section">
@@ -131,197 +193,259 @@ const breadcrumbSchema = {
           </div>
         </header>
 
+        <!-- TABLE OF CONTENTS -->
+        <nav class="table-of-contents" aria-label="Article Table of Contents">
+          <h2>Table of Contents</h2>
+          <ol class="toc-list">
+            {tableOfContents.map((item) => (
+              <li><a href={`#${item.id}`}>{item.title}</a></li>
+            ))}
+          </ol>
+        </nav>
+
         <!-- GAME IFRAME SECTION -->
         <section class="game-iframe-section">
           <GameIframe 
-            src="https://geometrydashgame.com/wp-content/uploads/games/uploads/html5/geometry-dash-game/index.html"
+            src="https://dashmetry.1games.io/"
             title="Play Geometry Dash Online"
             description="Click the play button above to start playing Geometry Dash. Use spacebar, mouse click, or arrow keys to jump. Complete levels by avoiding obstacles and reaching 100%."
           />
         </section>
         
         <section class="article-content">
-          <h2>About Geometry Dash</h2>
-          
-          <h3>What is Geometry Dash?</h3>
-          <p>Geometry Dash is a fast-paced platform game where you control a small cube that moves automatically from left to right. Your only job is to tap or click at the right moment to jump over spikes, gaps, and dangerous obstacles. There is no way to slow down or stop, so timing is everything. Each level is synchronized with an energetic soundtrack, and obstacles always appear in the same place, so repetition and memory are part of the design.</p>
-          
-          <p>This mix of rhythm and memory makes Geometry Dash easy to understand but hard to master. The game has become a global phenomenon with millions of players trying to beat increasingly difficult levels. What started as a simple mobile game has evolved into a complex platformer with multiple game modes, customization options, and a thriving community of level creators.</p>
+          <h2 id="what-is-geometry-dash">What is Geometry Dash?</h2>
+          <p>Geometry Dash is a rhythm-based platformer game that has captivated millions of players worldwide. Created by Robert Topala (RobTop Games) and released in 2013, this game combines the simplicity of one-button controls with the complexity of challenging level design. The core mechanic is straightforward: tap to jump, but the execution requires precision timing, pattern recognition, and musical synchronization.</p>
 
           <figure class="article-image">
-            <img src="/assets/covers/geometrydash-cover.png" alt="Geometry Dash Gameplay - Rhythm Platformer with Neon Graphics" width="800" height="450" loading="lazy" />
-            <figcaption>Geometry Dash combines rhythm and platforming in one addictive game with stunning neon visuals</figcaption>
+            <img 
+              src="/assets/covers/geometrydash-cover.png" 
+              alt="Geometry Dash gameplay screenshot showing colorful obstacles and geometric shapes" 
+              width="800" 
+              height="450" 
+              loading="lazy" 
+            />
+            <figcaption>Geometry Dash features vibrant visuals and challenging obstacle courses synchronized with music</figcaption>
           </figure>
-          
-          <h3>Game Mechanics and Gameplay</h3>
-          <p>As you progress, new mechanics appear: portals that change gravity, speed boosters, jump pads, and platforms that move or disappear. Sometimes the cube transforms into a ship, a ball, a UFO, or a wave, and each form has its own physics and controls. There is no "life bar" or health system. If you hit an obstacle, the run ends instantly and you restart from the beginning or from a checkpoint in practice mode.</p>
-          
-          <p>This "try, fail, learn, try again" loop is the core of Geometry Dash. The game teaches you through repetition and pattern recognition. Each level is a puzzle that you solve through muscle memory and timing. The satisfaction of finally beating a difficult level after dozens of attempts is what keeps players coming back.</p>
-          
-          <h3>History and Evolution of Geometry Dash</h3>
-          <p>Geometry Dash was created by developer Robert Topala (known as RobTop) and released in 2013 for mobile devices. What started as a small one-button game quickly grew into a global success thanks to its intense gameplay and strong community of players and creators. Over time, new levels, icons, and game modes were added through updates.</p>
-          
-          <p>The game also introduced a powerful level editor that allowed the community to design and share their own challenges. Many of these player-made levels became as famous as the official ones. The success of Geometry Dash also inspired spin-off versions like <strong><a href="/geometry-dash-lite/">Geometry Dash Lite</a></strong>, <strong><a href="/geometry-dash-meltdown/">Geometry Dash Meltdown</a></strong>, <strong><a href="/geometry-dash-subzero/">Geometry Dash SubZero</a></strong>, and <strong><a href="/geometry-dash-breeze/">Geometry Dash Breeze</a></strong>. Each one adds new music, levels, and visual themes to the main formula.</p>
-          
-          <h3>Available Platforms</h3>
-          <p>You can enjoy Geometry Dash on several platforms. It is available on mobile devices (iOS and Android) and also on PC through different services. On geometrydash.ie you can play a browser version that runs with HTML5, so you only need a modern web browser. Because the game works in the browser, you can play on Windows, macOS, Linux, and even on Chromebooks without installing anything.</p>
-          
-          <hr/>
-          
-          <h2>How to Play Geometry Dash</h2>
-          
-          <h3>Getting Started: Step-by-Step Instructions</h3>
-          <p>1. Open <strong>geometrydash.ie</strong> in your browser and wait for the game to load completely. Make sure your sound is on to follow the music and rhythm. The game loads quickly and is ready to play within seconds.</p>
-          
-          <p>2. From the main menu, choose a level. Beginners should start with the first level to learn the basic jumps and obstacles before trying something harder. The early levels serve as tutorials for the game mechanics.</p>
-          
-          <p>3. Once the level starts, your cube moves automatically. Tap, click, or press the jump key to avoid spikes and holes. Focus on the beat and watch how the level reacts to the music. The soundtrack is not just for atmosphere—it directly relates to where obstacles appear.</p>
-          
-          <p>4. When you crash, the run restarts. Try to remember where you failed and prepare your jump a bit earlier next time. Each failure teaches you something new about the level. This is why practice mode is so valuable.</p>
-          
-          <p>5. Use practice mode when a level feels too difficult. In practice mode you can place checkpoints, so you do not need to restart from the very beginning after every mistake. This feature is essential for learning tough sections.</p>
-          
-          <h3>Controls and Input Methods</h3>
-          <p>On PC, the default control is very simple: press the <strong>spacebar</strong>, click the <strong>left mouse button</strong>, or use the <strong>up arrow</strong> to jump. You only need one of these inputs; choose the one that feels most comfortable for you. Most players prefer the spacebar for keyboard play and mouse click for casual play.</p>
-          
-          <p>On mobile, tap anywhere on the screen to jump. The timing is the same, but your finger replaces the keyboard or mouse. Because the game is so responsive, even a tiny delay in your tap can be the difference between a clean jump and a crash. Mobile players often find it helpful to use headphones to hear the beat better.</p>
-          
-          <h3>Basic Rules and Game Flow</h3>
-          <p>The rules of Geometry Dash are very clear: Your cube never stops moving forward. One mistake means instant death and restart. You win the level when you reach 100% progress. Practice mode lets you learn tough sections with checkpoints. There is no time limit, no lives counter, and no traditional "game over". You can try a level as many times as you want until you finally complete it.</p>
-          
-          <hr/>
-          
-          <h2>Tips and Tricks for Geometry Dash Success</h2>
-          <p>Success in Geometry Dash is not only about fast reaction time. It also depends on patience, rhythm, and smart practice. Listen carefully to the music, watch the level patterns, and learn where each jump should happen. Here are proven strategies that will help you improve:</p>
-          
+
+          <p>The game operates on a simple principle: "Die and Retry." Each level failure sends you back to the beginning, but the game is designed so that you learn from each attempt. This addictive gameplay loop has made Geometry Dash one of the most popular games on mobile platforms and web browsers.</p>
+
+          <h2 id="how-to-play">How to Play Geometry Dash</h2>
+          <p>Playing Geometry Dash is simple to learn but challenging to master. Your character moves automatically from left to right across the screen. Your only control is making your character jump. The timing of your jumps is critical—you must jump at exactly the right moment to avoid obstacles and reach the end of each level.</p>
+
+          <h3>Basic Controls</h3>
           <ul>
-            <li><strong>Do not spam jumps:</strong> Every tap should be intentional and timed. Unnecessary jumps often cause crashes.</li>
-            <li><strong>Use headphones:</strong> Hearing the beat clearly helps you anticipate obstacles and time your jumps better.</li>
-            <li><strong>Start with easier levels:</strong> Build your skills gradually before attempting the hardest levels.</li>
-            <li><strong>Use practice mode extensively:</strong> Study sections that always kill you until you master them.</li>
-            <li><strong>Take short breaks:</strong> Your focus will be better after a rest. Frustration leads to mistakes.</li>
-            <li><strong>Watch your rhythm:</strong> The game is about following the beat, not just reacting to obstacles.</li>
-            <li><strong>Learn from failures:</strong> Each crash teaches you something about the level design.</li>
-            <li><strong>Customize your controls:</strong> Find the input method that feels most natural to you.</li>
+            <li><strong>PC:</strong> Press spacebar, click left mouse button, or press up arrow to jump</li>
+            <li><strong>Mobile:</strong> Tap anywhere on the screen to jump</li>
+            <li><strong>Keyboard:</strong> Use arrow keys or WASD for alternative controls</li>
           </ul>
-          
-          <hr/>
-          
-          <h2>Geometry Dash Features and Game Modes</h2>
-          <p>Geometry Dash combines simple controls with deep challenge and a lot of replay value. Many players keep coming back just to improve their consistency or to unlock new icons and colors. The game features multiple game modes that transform your character and change how you interact with obstacles.</p>
-          
-          <h3>Character Forms and Transformations</h3>
+
+          <p>The key to success is listening to the music and watching the patterns. Most obstacles appear in sync with the beat, so experienced players use the soundtrack as a guide for when to jump. This synchronization between music and gameplay is what makes Geometry Dash unique among platformers.</p>
+
+          <h2 id="gameplay-mechanics">Gameplay Mechanics</h2>
+          <p>Geometry Dash features several core mechanics that define the gameplay experience:</p>
+
+          <h3>Gravity and Physics</h3>
+          <p>Your character is affected by gravity, falling when not jumping. Different sections of levels feature gravity portals that reverse the direction of gravity, forcing you to adapt your jumping patterns. Understanding gravity mechanics is essential for progression.</p>
+
+          <h3>Speed Changes</h3>
+          <p>Throughout levels, you'll encounter speed portals that increase or decrease your movement speed. These changes require you to adjust your timing accordingly. Faster sections demand quicker reflexes, while slower sections allow for more deliberate jumps.</p>
+
+          <h3>Obstacle Types</h3>
+          <p>Geometry Dash features various obstacle types including spikes, moving platforms, rotating obstacles, and more. Each obstacle type requires different strategies to overcome. Learning to recognize and respond to each obstacle type is crucial for beating difficult levels.</p>
+
+          <h2 id="game-modes">Game Modes and Character Forms</h2>
+          <p>One of Geometry Dash's defining features is the variety of game modes. Your character transforms into different forms, each with unique physics and controls:</p>
+
+          <h3>The Cube Form</h3>
+          <p>The cube is your default form. It jumps over obstacles with standard gravity physics. This is the most intuitive form and is used in most levels. Master the cube form first before attempting other character types.</p>
+
+          <h3>The Ship Form</h3>
+          <p>In ship mode, your character flies up and down instead of jumping. Tapping makes you go up, and releasing makes you go down. This form requires smooth, controlled movements and is often considered more difficult than the cube.</p>
+
+          <h3>The Ball Form</h3>
+          <p>The ball bounces and switches gravity with every tap. It demands very precise timing and is challenging for most players. The ball form teaches you about gravity mechanics and momentum.</p>
+
+          <h3>The UFO Form</h3>
+          <p>The UFO hovers and requires you to control its vertical position. This form is less common but appears in specific level sections. It requires a different approach than other forms.</p>
+
+          <h3>The Wave Form</h3>
+          <p>The wave moves up and down in a wave-like pattern. Tapping controls its vertical position. This form is particularly challenging and requires excellent timing.</p>
+
+          <h3>The Robot Form</h3>
+          <p>The robot can jump multiple times, making it more forgiving than other forms. It's often used in easier sections or as a reward for skilled players.</p>
+
+          <h3>The Spider Form</h3>
+          <p>The spider can climb on surfaces and walls. This form opens up new level design possibilities and requires players to think differently about navigation.</p>
+
+          <h2 id="difficulty-levels">Difficulty Levels</h2>
+          <p>Geometry Dash features a wide range of difficulty levels, from beginner-friendly to impossibly hard:</p>
+
+          <h3>Easy Levels (1-2 stars)</h3>
+          <p>Perfect for learning the basics. These levels teach fundamental mechanics with simple obstacles and straightforward patterns. Beginners should start here.</p>
+
+          <h3>Medium Levels (3-4 stars)</h3>
+          <p>Intermediate challenges that introduce multiple game modes and more complex patterns. These levels require solid fundamentals and practice.</p>
+
+          <h3>Hard Levels (5-6 stars)</h3>
+          <p>Challenging levels that demand precision and pattern memorization. These levels are where most players struggle and need significant practice.</p>
+
+          <h3>Insane Levels (7-8 stars)</h3>
+          <p>Extremely difficult levels requiring expert-level skills. Only experienced players should attempt these levels.</p>
+
+          <h3>Extreme Levels (9-10 stars)</h3>
+          <p>The hardest levels in the game. These are designed for the most skilled players and require hundreds of attempts to complete.</p>
+
+          <h2 id="tips-and-tricks">Tips and Tricks for Success</h2>
+          <p>Here are expert tips to help you improve your Geometry Dash skills:</p>
+
           <ul>
-            <li><strong>Cube:</strong> The default form. Jumps over obstacles with standard gravity physics.</li>
-            <li><strong>Ship:</strong> Flies up and down. Requires precise vertical control through portals.</li>
-            <li><strong>Ball:</strong> Bounces and switches gravity with every tap. Demands very precise timing.</li>
-            <li><strong>UFO:</strong> Flies freely with different physics. Requires smooth, controlled movements.</li>
-            <li><strong>Wave:</strong> Moves in a zig-zag line. Needs very precise control and timing.</li>
-            <li><strong>Robot:</strong> Can jump higher and has unique mechanics. Adds variety to gameplay.</li>
-            <li><strong>Spider:</strong> Climbs walls and has special wall-jump mechanics.</li>
+            <li><strong>Listen to the music:</strong> The soundtrack is your guide. Obstacles sync with the beat, so use the music to anticipate jumps</li>
+            <li><strong>Use practice mode:</strong> Place checkpoints to practice difficult sections without restarting from the beginning</li>
+            <li><strong>Study patterns:</strong> Watch how obstacles move and appear. Understanding patterns is key to success</li>
+            <li><strong>Don't rush:</strong> Focus on consistency over speed. Accurate jumps matter more than fast reactions</li>
+            <li><strong>Take breaks:</strong> Playing when frustrated leads to mistakes. Step away and return with fresh eyes</li>
+            <li><strong>Watch tutorials:</strong> Watching experienced players can teach you new techniques and strategies</li>
+            <li><strong>Practice specific sections:</strong> Use practice mode to master difficult parts before attempting full levels</li>
+            <li><strong>Learn from failures:</strong> Each failed attempt teaches you something. Analyze what went wrong</li>
+            <li><strong>Stay calm:</strong> Panic leads to mistakes. Maintain focus and composure during difficult sections</li>
+            <li><strong>Customize your character:</strong> Unlock and use icons that help you see your character better</li>
           </ul>
-          
-          <h3>Additional Features</h3>
+
+          <h2 id="geometry-dash-versions">Geometry Dash Versions</h2>
+          <p>The Geometry Dash franchise includes several versions, each with unique content and themes:</p>
+
+          <table class="versions-table">
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Theme</th>
+                <th>Difficulty</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong><a href="/geometry-dash-lite/">Geometry Dash Lite</a></strong></td>
+                <td>Beginner-friendly</td>
+                <td>Easy to Medium</td>
+                <td>New players</td>
+              </tr>
+              <tr>
+                <td><strong><a href="/geometry-dash-meltdown/">Geometry Dash Meltdown</a></strong></td>
+                <td>Dark/Neon</td>
+                <td>Medium to Hard</td>
+                <td>Experienced players</td>
+              </tr>
+              <tr>
+                <td><strong><a href="/geometry-dash-subzero/">Geometry Dash SubZero</a></strong></td>
+                <td>Winter/Icy</td>
+                <td>Medium to Hard</td>
+                <td>Seasonal players</td>
+              </tr>
+              <tr>
+                <td><strong><a href="/geometry-dash-breeze/">Geometry Dash Breeze</a></strong></td>
+                <td>Colorful/Vibrant</td>
+                <td>Easy to Medium</td>
+                <td>Casual players</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="controls">Game Controls Reference</h2>
+          <p>Master these controls to play Geometry Dash effectively:</p>
+
+          <table class="controls-table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Jump Control</th>
+                <th>Alternative</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PC - Keyboard</td>
+                <td>Spacebar</td>
+                <td>Up Arrow / W Key</td>
+              </tr>
+              <tr>
+                <td>PC - Mouse</td>
+                <td>Left Click</td>
+                <td>Right Click</td>
+              </tr>
+              <tr>
+                <td>Mobile</td>
+                <td>Tap Screen</td>
+                <td>Touch Anywhere</td>
+              </tr>
+              <tr>
+                <td>Tablet</td>
+                <td>Tap Screen</td>
+                <td>Touch Anywhere</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="features">Key Features of Geometry Dash</h2>
           <ul>
-            <li><strong>Icon Customization:</strong> Unlock new shapes, colors, and trails as you progress.</li>
-            <li><strong>Practice Mode:</strong> Place checkpoints and train difficult sections safely.</li>
-            <li><strong>Level Editor:</strong> Create your own levels and share them with other players (in the full version).</li>
-            <li><strong>Powerful Soundtrack:</strong> Electronic tracks that match the level design and rhythm.</li>
-            <li><strong>Achievements and Rewards:</strong> Unlock badges and rewards as you progress.</li>
-            <li><strong>Difficulty Ratings:</strong> Levels are rated from easy to insane difficulty.</li>
+            <li><strong>One-button gameplay:</strong> Simple controls that are easy to learn but hard to master</li>
+            <li><strong>Rhythm synchronization:</strong> Obstacles sync perfectly with the music for an immersive experience</li>
+            <li><strong>Multiple game modes:</strong> Seven different character forms with unique physics</li>
+            <li><strong>Challenging levels:</strong> Hundreds of official levels with varying difficulty</li>
+            <li><strong>Level editor:</strong> Create and share your own custom levels</li>
+            <li><strong>Community content:</strong> Thousands of user-created levels to play</li>
+            <li><strong>Customization:</strong> Unlock and customize your character with different icons and colors</li>
+            <li><strong>Practice mode:</strong> Place checkpoints to practice difficult sections</li>
+            <li><strong>Achievements:</strong> Complete challenges and unlock achievements</li>
+            <li><strong>Cross-platform:</strong> Play on PC, mobile, web, and more</li>
           </ul>
-          
-          <hr/>
-          
-          <h2>Geometry Dash Difficulty Levels</h2>
-          
-          <h3>Understanding the Difficulty Curve</h3>
-          <p>Geometry Dash offers a wide range of levels with different speeds, visual themes, and difficulty. Early levels introduce basic jumps and short sections, while later levels mix gravity changes, portals, and fast sequences that test everything you have learned. The difficulty curve is part of the fun.</p>
-          
-          <h3>Difficulty Progression</h3>
-          <p>Each new level introduces something slightly more complex than the previous one. When you finally beat a tough level after many attempts, the feeling of satisfaction is very strong. The official levels range from easy introductory stages to insanely difficult challenges that require perfect execution.</p>
-          
-          <h3>The Hardest Levels</h3>
-          <p>Debates about the "hardest level" in Geometry Dash never end. Some players focus on official levels, while others talk about extreme community creations made with the level editor. In general, the hardest levels combine very fast sections, tight jump windows, and complex portal sequences. If you are a beginner, do not worry about the hardest levels yet. Build your skills slowly and only then move into the extreme challenges.</p>
-          
-          <hr/>
-          
-          <h2>Geometry Dash Community and Level Editor</h2>
-          
-          <h3>The Creativity of the Community</h3>
-          <p>In the full version, the level editor allows players to create their own stages and publish them online. This has produced thousands of creative levels with unique patterns, visual effects, and custom music. Community levels extend the life of the game and keep advanced players engaged for years.</p>
-          
-          <h3>A Unique Experience in Every Level</h3>
-          <p>Every level in Geometry Dash feels like a short interactive music video. Obstacles move with the beat, the screen flashes with the music, and each successful jump keeps the rhythm alive. Because of this, many players replay their favorite levels again and again just to enjoy the flow.</p>
-          
-          <hr/>
-          
-          <h2>Geometry Dash Versions and Spin-Offs</h2>
-          
-          <h3>Main Game Versions</h3>
-          <p>The official game includes many main levels that go from easy to insane difficulty. Each one has its own background, soundtrack, and mechanic focus. Beating all the official levels is a long-term goal that requires patience and a lot of practice. The full version on PC and mobile offers the complete experience with all features.</p>
-          
-          <h3>Geometry Dash Lite</h3>
-          <p><strong><a href="/geometry-dash-lite/">Geometry Dash Lite</a></strong> is a free version with a limited selection of levels. It is perfect if you want to test the game before buying the full edition or if you only have a few minutes to play on your phone. The core gameplay is the same, so it is still a great way to practice your timing and rhythm.</p>
-          
-          <h3>Other Spin-Offs</h3>
-          <p>Explore <strong><a href="/geometry-dash-meltdown/">Geometry Dash Meltdown</a></strong> for new dark-themed levels, <strong><a href="/geometry-dash-subzero/">Geometry Dash SubZero</a></strong> for icy winter challenges, and <strong><a href="/geometry-dash-breeze/">Geometry Dash Breeze</a></strong> for colorful, playful gameplay. Each spin-off brings unique music, visual themes, and level designs while maintaining the core Geometry Dash experience.</p>
-          
-          <hr/>
-          
-          <h2>Frequently Asked Questions About Geometry Dash</h2>
-          
-          <h3>Is Geometry Dash free to play on geometrydash.ie?</h3>
-          <p>Yes. The browser version on geometrydash.ie is completely free to play. You do not need to register, pay, or install anything. Just open your browser and start playing instantly.</p>
-          
-          <h3>Can I play Geometry Dash on mobile and PC?</h3>
-          <p>Geometry Dash is available on both mobile devices (iOS and Android) and PC. On geometrydash.ie you can play it in your browser on desktop, laptop, tablet, or mobile without downloading anything.</p>
-          
-          <h3>Why do I keep dying at the same place?</h3>
-          <p>That usually means your timing is slightly off. Use practice mode to place checkpoints and repeat that section until you learn the exact moment to jump or tap. Consistency comes with practice.</p>
-          
-          <h3>Do I need an account to save my progress?</h3>
-          <p>For browser versions, progress is often saved locally in your browser. For the full game, you can create an account to sync data across devices, depending on the platform you use.</p>
-          
-          <h3>Is Geometry Dash safe for kids?</h3>
-          <p>Geometry Dash has no violence and no complex story. The main challenge is difficulty and fast reaction time. Many children enjoy it, but some younger players might find higher levels frustrating because of the repeated fails.</p>
-          
-          <h3>How long does it take to complete Geometry Dash?</h3>
-          <p>Completing all official levels can take anywhere from 10 to 100+ hours depending on your skill level and dedication. Casual players might spend weeks or months, while dedicated players aim to beat all levels and unlock all achievements.</p>
-          
+
+          <h2 id="faq">Frequently Asked Questions</h2>
+
+          <h3>Is Geometry Dash really free?</h3>
+          <p>Yes, Geometry Dash is completely free to play on geometrydash.ie. There are no hidden costs, no in-app purchases required, and no ads interrupting gameplay. Simply open your browser and start playing instantly.</p>
+
+          <h3>Do I need to download anything to play?</h3>
+          <p>No downloads are required. Geometry Dash runs directly in your web browser. Just visit geometrydash.ie and start playing immediately.</p>
+
+          <h3>Can I play Geometry Dash offline?</h3>
+          <p>The web version requires an internet connection. However, the mobile versions (iOS and Android) can be played offline after downloading.</p>
+
+          <h3>What's the difference between Geometry Dash versions?</h3>
+          <p>Each version has different levels, music, visual themes, and difficulty levels. Lite is beginner-friendly, Meltdown is dark-themed, SubZero is winter-themed, and Breeze is colorful.</p>
+
+          <h3>How long does it take to beat Geometry Dash?</h3>
+          <p>Beating all official levels can take anywhere from 10-50 hours depending on your skill level. However, with community-created levels, there's virtually unlimited content.</p>
+
+          <h3>Is Geometry Dash suitable for children?</h3>
+          <p>Yes, Geometry Dash is suitable for children. It has no violence or inappropriate content. However, some levels can be frustrating due to difficulty, so parental guidance is recommended for very young children.</p>
+
+          <h3>Can I play Geometry Dash with friends?</h3>
+          <p>The main game is single-player, but you can compete with friends by comparing completion times and achievements.</p>
+
+          <h3>What are the system requirements?</h3>
+          <p>Geometry Dash works on any device with a modern web browser (Chrome, Firefox, Safari, Edge). No special hardware is required.</p>
+
+          <h3>Is there a leaderboard?</h3>
+          <p>Yes, Geometry Dash features leaderboards where players can compete for the fastest completion times on various levels.</p>
+
           <h3>Can I create my own levels?</h3>
-          <p>Yes, the full version of Geometry Dash includes a powerful level editor. You can create custom levels and share them with the community. Many player-created levels are as popular as official ones.</p>
-          
-          <hr/>
-          
-          <h2>Why Play Geometry Dash on geometrydash.ie?</h2>
-          
-          <p>Geometry Dash is a simple yet intense rhythm platformer that can keep you playing for hours. With just one button, you enter a world of precise jumps, fast patterns, and catchy music. Each level is a small challenge that invites you to try "just one more time". The game rewards practice, patience, and rhythm awareness.</p>
-          
-          <p>On geometrydash.ie, you get instant access to the game without downloads, registrations, or complications. The browser version is optimized for smooth gameplay and quick loading. Whether you are a casual player looking for a quick gaming session or a dedicated player aiming to beat all levels, Geometry Dash offers the perfect challenge.</p>
-          
-          <p>If you like skill-based games with clean controls and quick retries, open <strong>geometrydash.ie</strong>, press play, and start your next run. Then, when you are ready, explore more browser games in the same style and keep improving your reflexes and timing.</p>
-          
-          <div class="other-games">
-            <h3>Explore Other Geometry Dash Games</h3>
-            <div class="games-grid">
-              <a href="/geometry-dash-lite/" class="game-link">
-                <img src="/assets/icons/GEOMETRYDASHLITE-ICON.png" alt="Geometry Dash Lite Icon" width="100" height="100" loading="lazy" />
-                <span>Geometry Dash Lite</span>
-              </a>
-              <a href="/geometry-dash-meltdown/" class="game-link">
-                <img src="/assets/icons/geometrydashmeltdown-icon.webp" alt="Geometry Dash Meltdown Icon" width="100" height="100" loading="lazy" />
-                <span>Geometry Dash Meltdown</span>
-              </a>
-              <a href="/geometry-dash-subzero/" class="game-link">
-                <img src="/assets/icons/geometrydashSUBZERO-ICON.webp" alt="Geometry Dash SubZero Icon" width="100" height="100" loading="lazy" />
-                <span>Geometry Dash SubZero</span>
-              </a>
-              <a href="/geometry-dash-breeze/" class="game-link">
-                <img src="/assets/icons/geometrydashBREEZE-ICON.png" alt="Geometry Dash Breeze Icon" width="100" height="100" loading="lazy" />
-                <span>Geometry Dash Breeze</span>
-              </a>
-            </div>
+          <p>Yes, the full version of Geometry Dash includes a level editor where you can create custom levels and share them with the community.</p>
+
+          <h2>Conclusion</h2>
+          <p>Geometry Dash is more than just a game—it's a cultural phenomenon that has captivated millions of players worldwide. With its addictive gameplay, beautiful visuals, and perfectly synchronized music, it offers an experience that few games can match. Whether you're a casual player looking for a fun distraction or a hardcore gamer seeking the ultimate challenge, Geometry Dash delivers on all fronts.</p>
+
+          <p>Start your Geometry Dash journey today on geometrydash.ie. Play free online, no downloads required. Master the rhythm, time your jumps perfectly, and experience the thrill of completing increasingly difficult levels. Join millions of players in one of the most beloved games ever created.</p>
+
+          <div class="cta-section">
+            <h3>Ready to Play?</h3>
+            <p>Start playing Geometry Dash now and challenge yourself with our collection of games:</p>
+            <ul class="game-links">
+              <li><a href="/geometry-dash-lite/">Play Geometry Dash Lite</a> - Perfect for beginners</li>
+              <li><a href="/geometry-dash-meltdown/">Play Geometry Dash Meltdown</a> - Dark-themed challenges</li>
+              <li><a href="/geometry-dash-subzero/">Play Geometry Dash SubZero</a> - Winter adventure</li>
+              <li><a href="/geometry-dash-breeze/">Play Geometry Dash Breeze</a> - Colorful fun</li>
+            </ul>
           </div>
         </section>
       </article>
@@ -336,6 +460,21 @@ const breadcrumbSchema = {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
+  }
+
+  .game-icon {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .game-icon img {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(74, 246, 38, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .game-icon img:hover {
+    transform: scale(1.05);
   }
 
   .game-header h1 {
@@ -358,6 +497,47 @@ const breadcrumbSchema = {
     margin: 2rem 0;
   }
 
+  /* TABLE OF CONTENTS STYLES */
+  .table-of-contents {
+    background-color: var(--dark-secondary);
+    border: 2px solid var(--purple);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+  }
+
+  .table-of-contents h2 {
+    color: var(--cyan);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .toc-list {
+    list-style: decimal;
+    padding-left: 2rem;
+    margin: 0;
+  }
+
+  .toc-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .toc-list a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .toc-list a:hover {
+    color: var(--neon-green);
+    text-decoration: underline;
+  }
+
   .game-iframe-section {
     margin: 3rem 0;
     padding: 2rem 0;
@@ -376,6 +556,7 @@ const breadcrumbSchema = {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--purple);
     font-size: 2rem;
+    scroll-margin-top: 120px;
   }
 
   .article-content h3 {
@@ -399,24 +580,6 @@ const breadcrumbSchema = {
   .article-content li {
     margin-bottom: 0.75rem;
     line-height: 1.8;
-  }
-
-  .article-content a {
-    color: var(--cyan);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 500;
-  }
-
-  .article-content a:hover {
-    color: var(--neon-green);
-    text-decoration: underline;
-  }
-
-  .article-content hr {
-    border: none;
-    border-top: 2px solid var(--dark-secondary);
-    margin: 3rem 0;
   }
 
   .article-image {
@@ -447,62 +610,91 @@ const breadcrumbSchema = {
     line-height: 1.6;
   }
 
-  .other-games {
-    margin-top: 4rem;
-    padding-top: 3rem;
-    border-top: 2px solid var(--dark-secondary);
-  }
-
-  .other-games h3 {
-    color: var(--cyan);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-  }
-
-  .games-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .game-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: rgba(74, 246, 38, 0.05);
-    border-radius: 12px;
-    text-decoration: none;
-    color: var(--text);
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-  }
-
-  .game-link:hover {
-    background: rgba(74, 246, 38, 0.15);
-    border-color: var(--neon-green);
-    transform: translateY(-4px);
-  }
-
-  .game-link img {
-    width: 100px;
-    height: 100px;
+  /* TABLE STYLES */
+  .versions-table,
+  .controls-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border: 2px solid var(--purple);
     border-radius: 8px;
-    object-fit: cover;
+    overflow: hidden;
   }
 
-  .game-link span {
-    text-align: center;
-    font-weight: 600;
-    color: var(--neon-green);
-    font-size: 0.95rem;
+  .versions-table thead,
+  .controls-table thead {
+    background-color: var(--dark-secondary);
   }
 
-  .game-link:hover span {
+  .versions-table th,
+  .controls-table th {
     color: var(--cyan);
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid var(--purple);
+  }
+
+  .versions-table td,
+  .controls-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--purple);
+  }
+
+  .versions-table tbody tr:hover,
+  .controls-table tbody tr:hover {
+    background-color: rgba(74, 246, 38, 0.05);
+  }
+
+  .versions-table a {
+    color: var(--cyan);
+    text-decoration: none;
+  }
+
+  .versions-table a:hover {
+    color: var(--neon-green);
+    text-decoration: underline;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background-color: var(--dark-secondary);
+    border: 2px solid var(--purple);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+
+  .cta-section h3 {
+    color: var(--neon-green);
+    margin-top: 0;
+    text-shadow: 0 0 10px rgba(74, 246, 38, 0.3);
+  }
+
+  .game-links {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .game-links li {
+    margin-bottom: 1rem;
+  }
+
+  .game-links a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--purple), var(--cyan));
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .game-links a:hover {
+    background: linear-gradient(135deg, var(--cyan), var(--neon-green));
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(74, 246, 38, 0.3);
   }
 
   @media (max-width: 768px) {
@@ -518,8 +710,21 @@ const breadcrumbSchema = {
       font-size: 1.2rem;
     }
 
-    .games-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .table-of-contents {
+      position: static;
+      margin: 1.5rem 0;
+    }
+
+    .versions-table,
+    .controls-table {
+      font-size: 0.9rem;
+    }
+
+    .versions-table th,
+    .controls-table th,
+    .versions-table td,
+    .controls-table td {
+      padding: 0.75rem;
     }
   }
 </style>
