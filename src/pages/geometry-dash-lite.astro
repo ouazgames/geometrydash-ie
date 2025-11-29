@@ -11,6 +11,23 @@ const breadcrumbItems = [
   { name: 'Geometry Dash Lite', url: '/geometry-dash-lite/' }
 ];
 
+const tableOfContents = [
+  { id: "what-is-geometry-dash-lite", title: "What is Geometry Dash Lite?" },
+  { id: "key-features", title: "Key Features of Geometry Dash Lite" },
+  { id: "how-to-play", title: "How to Play Geometry Dash Lite" },
+  { id: "game-controls", title: "Game Controls and Input Methods" },
+  { id: "difficulty-progression", title: "Difficulty Progression in Geometry Dash Lite" },
+  { id: "game-modes", title: "Game Modes and Character Transformations" },
+  { id: "cube-form", title: "Understanding the Cube Form" },
+  { id: "ship-form", title: "The Ship Form Explained" },
+  { id: "ball-form", title: "The Ball Form Challenge" },
+  { id: "practice-mode", title: "Practice Mode Strategy" },
+  { id: "customization", title: "Customization and Unlockables" },
+  { id: "why-choose-lite", title: "Why Choose Geometry Dash Lite?" },
+  { id: "tips-success", title: "Tips for Success in Geometry Dash Lite" },
+  { id: "faq", title: "Frequently Asked Questions" }
+];
+
 const gameSchema = {
   "@context": "https://schema.org",
   "@type": "VideoGame",
@@ -92,6 +109,16 @@ const faqSchema = {
           </div>
         </header>
 
+        <!-- TABLE OF CONTENTS -->
+        <nav class="table-of-contents" aria-label="Article Table of Contents">
+          <h2>Table of Contents</h2>
+          <ol class="toc-list">
+            {tableOfContents.map((item) => (
+              <li><a href={`#${item.id}`}>{item.title}</a></li>
+            ))}
+          </ol>
+        </nav>
+
         <!-- GAME IFRAME SECTION -->
         <section class="game-iframe-section">
           <GameIframe 
@@ -102,15 +129,15 @@ const faqSchema = {
         </section>
         
         <section class="article-content">
-          <h2>What is Geometry Dash Lite?</h2>
+          <h2 id="what-is-geometry-dash-lite">What is Geometry Dash Lite?</h2>
           <p>Geometry Dash Lite is the free version of the popular Geometry Dash game. It features a limited selection of levels perfect for players who want to experience the core gameplay without purchasing the full version. The lite version maintains all the exciting mechanics and challenging gameplay that made Geometry Dash famous. It's an excellent way to learn the game before diving into the full version.</p>
 
           <figure class="article-image">
-            <img src="/assets/covers/geometrydash-lite-cover.png" alt="Geometry Dash Lite Gameplay - Blue-Themed Level" width="800" height="450" loading="lazy" />
+            <img src="/assets/covers/geometry-dash-lite-gameplay-screenshot-blue-theme.png" alt="Geometry Dash Lite Gameplay - Blue-Themed Level" width="800" height="450" loading="lazy" />
             <figcaption>Geometry Dash Lite offers the same addictive gameplay with carefully selected beginner-friendly levels</figcaption>
           </figure>
           
-          <h2>Key Features of Geometry Dash Lite</h2>
+          <h2 id="key-features">Key Features of Geometry Dash Lite</h2>
           <p>Geometry Dash Lite combines simplicity with challenge, offering the perfect introduction to rhythm-based platformers. Whether you're completely new to gaming or looking for a casual experience, Lite provides everything you need to understand and enjoy Geometry Dash.</p>
           
           <ul>
@@ -123,42 +150,42 @@ const faqSchema = {
             <li><strong>Practice mode:</strong> Learn difficult sections with checkpoint placement</li>
           </ul>
           
-          <h2>How to Play Geometry Dash Lite</h2>
+          <h2 id="how-to-play">How to Play Geometry Dash Lite</h2>
           <p>Playing Geometry Dash Lite is simple: tap or click to make your cube jump. Your character moves automatically from left to right, and you need to time your jumps perfectly to avoid obstacles. The game is all about rhythm and timing. Each level is synchronized with music, so listening to the beat helps you anticipate where obstacles will appear.</p>
           
           <p>Practice mode allows you to place checkpoints and learn difficult sections without restarting from the beginning every time. This feature is especially valuable for beginners who are still learning the game mechanics. Start with the first level to understand the basics, then gradually progress to more challenging stages.</p>
           
-          <h2>Game Controls and Input Methods</h2>
+          <h2 id="game-controls">Game Controls and Input Methods</h2>
           <p>On PC, press the spacebar, click the left mouse button, or use the up arrow to jump. Choose the input method that feels most comfortable for you. On mobile, tap anywhere on the screen to jump. The timing is the same, but your finger replaces the keyboard or mouse.</p>
           
-          <h2>Difficulty Progression in Geometry Dash Lite</h2>
+          <h2 id="difficulty-progression">Difficulty Progression in Geometry Dash Lite</h2>
           <p>Geometry Dash Lite features a well-balanced difficulty curve designed specifically for new players. Early levels teach you the basics with simple jumps and straightforward obstacles. As you progress, new mechanics are introduced: gravity portals, speed changes, and character transformations. The later levels in Lite are challenging but fair, providing a good stepping stone before moving to the full version of Geometry Dash.</p>
           
-          <h2>Game Modes and Character Transformations</h2>
+          <h2 id="game-modes">Game Modes and Character Transformations</h2>
           <p>Like the full version, Geometry Dash Lite features multiple game modes where your cube transforms into different shapes. Each form has unique physics and controls that you need to master. The cube, ship, ball, and other forms all behave differently, adding variety to the gameplay. Learning how each form works is essential for progressing through the levels.</p>
           
-          <h2>Understanding the Cube Form</h2>
+          <h2 id="cube-form">Understanding the Cube Form</h2>
           <p>The cube is your default form and the easiest to control. It jumps over obstacles with standard gravity physics. Master the cube form first before attempting other character types. The cube teaches you the fundamental timing and rhythm that applies to all other forms.</p>
           
-          <h2>The Ship Form Explained</h2>
+          <h2 id="ship-form">The Ship Form Explained</h2>
           <p>The ship flies up and down instead of jumping. It requires precise vertical control through portals. When you transform into a ship, your controls change completely—tapping makes you go up, and releasing makes you go down. This form teaches you smooth, controlled movements.</p>
           
-          <h2>The Ball Form Challenge</h2>
+          <h2 id="ball-form">The Ball Form Challenge</h2>
           <p>The ball bounces and switches gravity with every tap. It demands very precise timing and is more challenging than the cube. Many players find the ball form frustrating at first, but with practice, you'll master the unique bouncing mechanics.</p>
           
-          <h2>Practice Mode Strategy</h2>
+          <h2 id="practice-mode">Practice Mode Strategy</h2>
           <p>Stuck on a difficult section? Use practice mode to place checkpoints and practice specific parts of a level without restarting from the beginning. This feature is essential for learning tough sequences and improving your consistency. Spend time in practice mode to build muscle memory and understand level patterns.</p>
           
-          <h2>Customization and Unlockables</h2>
+          <h2 id="customization">Customization and Unlockables</h2>
           <p>As you progress through Geometry Dash Lite, unlock new icons, colors, and visual customization options. Personalize your character to make it uniquely yours while you master the challenging levels. Unlocking new cosmetics gives you goals to work towards beyond just beating levels.</p>
           
-          <h2>Why Choose Geometry Dash Lite?</h2>
+          <h2 id="why-choose-lite">Why Choose Geometry Dash Lite?</h2>
           <p>If you're new to Geometry Dash, Lite is the perfect starting point. It's completely free, requires no download, and provides enough content to understand if you'll enjoy the full game. Many players use Lite to practice before moving to the more challenging full version. The curated level selection ensures you get a balanced learning experience without overwhelming difficulty spikes.</p>
           
           <h2>Perfect for Casual Gaming</h2>
           <p>Geometry Dash Lite is ideal for casual players who want quick gaming sessions without commitment. Each level takes just a few minutes to complete, making it perfect for playing during breaks or commutes. The game is accessible on any device with a web browser.</p>
           
-          <h2>Tips for Success in Geometry Dash Lite</h2>
+          <h2 id="tips-success">Tips for Success in Geometry Dash Lite</h2>
           <ul>
             <li>Listen carefully to the music—obstacles sync with the beat</li>
             <li>Don't rush; focus on consistency over speed</li>
@@ -175,7 +202,7 @@ const faqSchema = {
           <h2>Free to Play Online</h2>
           <p>Geometry Dash Lite is completely free to play on geometrydash.ie. No downloads, no registration, and no hidden costs. Just open your browser and start playing instantly. The game loads quickly and runs smoothly on any modern browser.</p>
           
-          <h2>Frequently Asked Questions</h2>
+          <h2 id="faq">Frequently Asked Questions</h2>
           
           <h3>Is Geometry Dash Lite really free?</h3>
           <p>Yes, Geometry Dash Lite is completely free with no in-app purchases or hidden costs. You can play all levels without spending any money.</p>

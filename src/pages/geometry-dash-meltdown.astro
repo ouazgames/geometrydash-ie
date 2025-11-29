@@ -11,6 +11,23 @@ const breadcrumbItems = [
   { name: 'Geometry Dash Meltdown', url: '/geometry-dash-meltdown/' }
 ];
 
+const tableOfContents = [
+  { id: "what-is-geometry-dash-meltdown", title: "What is Geometry Dash Meltdown?" },
+  { id: "new-content", title: "New Content in Geometry Dash Meltdown" },
+  { id: "why-play-meltdown", title: "Why Play Geometry Dash Meltdown?" },
+  { id: "gameplay-mechanics", title: "Gameplay Mechanics" },
+  { id: "game-modes", title: "Game Modes and Character Forms" },
+  { id: "cube-form", title: "The Cube Form in Meltdown" },
+  { id: "advanced-forms", title: "Advanced Forms in Meltdown" },
+  { id: "difficulty", title: "Difficulty and Progression" },
+  { id: "level-design", title: "Level Design Philosophy" },
+  { id: "practice-mode", title: "Practice Mode Strategy" },
+  { id: "customization", title: "Customization and Unlockables" },
+  { id: "tips", title: "Tips for Mastering Geometry Dash Meltdown" },
+  { id: "comparing", title: "Comparing Meltdown to the Original" },
+  { id: "faq", title: "Frequently Asked Questions" }
+];
+
 const gameSchema = {
   "@context": "https://schema.org",
   "@type": "VideoGame",
@@ -69,6 +86,16 @@ const gameSchema = {
           </div>
         </header>
 
+        <!-- TABLE OF CONTENTS -->
+        <nav class="table-of-contents" aria-label="Article Table of Contents">
+          <h2>Table of Contents</h2>
+          <ol class="toc-list">
+            {tableOfContents.map((item) => (
+              <li><a href={`#${item.id}`}>{item.title}</a></li>
+            ))}
+          </ol>
+        </nav>
+
         <!-- GAME IFRAME SECTION -->
         <section class="game-iframe-section">
           <GameIframe 
@@ -79,15 +106,15 @@ const gameSchema = {
         </section>
         
         <section class="article-content">
-          <h2>What is Geometry Dash Meltdown?</h2>
+          <h2 id="what-is-geometry-dash-meltdown">What is Geometry Dash Meltdown?</h2>
           <p>Geometry Dash Meltdown is a spin-off of the original Geometry Dash game. While it maintains the core rhythm-platformer mechanics, it introduces completely new levels, original music tracks, and unique visual themes with a darker aesthetic. If you've mastered the original game, Meltdown offers fresh challenges with a different flavor and atmosphere that makes it feel like a brand new experience.</p>
 
           <figure class="article-image">
-            <img src="/assets/covers/geometrydash-meltdown-cover.png" alt="Geometry Dash Meltdown Gameplay - Dark Neon Theme" width="800" height="450" loading="lazy" />
+            <img src="/assets/covers/geometry-dash-meltdown-gameplay-screenshot-dark-neon.png" alt="Geometry Dash Meltdown Gameplay - Dark Neon Theme" width="800" height="450" loading="lazy" />
             <figcaption>Geometry Dash Meltdown brings new levels and dark music to the classic formula</figcaption>
           </figure>
           
-          <h2>New Content in Geometry Dash Meltdown</h2>
+          <h2 id="new-content">New Content in Geometry Dash Meltdown</h2>
           <p>Meltdown is not just a reskin of the original game—it's a completely new experience with fresh content designed specifically for this version. Every aspect has been carefully crafted to provide a unique challenge and aesthetic.</p>
           
           <ul>
@@ -99,34 +126,34 @@ const gameSchema = {
             <li><strong>Multiple Game Modes:</strong> Character transformations and forms just like the original</li>
           </ul>
           
-          <h2>Why Play Geometry Dash Meltdown?</h2>
+          <h2 id="why-play-meltdown">Why Play Geometry Dash Meltdown?</h2>
           <p>If you've beaten the original Geometry Dash and want more, Meltdown is the perfect next step. It offers the same satisfying rhythm-based gameplay but with completely fresh content. The new levels are designed to challenge even experienced players. The darker visual theme and new music create a different atmosphere that keeps the game feeling fresh and exciting.</p>
           
-          <h2>Gameplay Mechanics</h2>
+          <h2 id="gameplay-mechanics">Gameplay Mechanics</h2>
           <p>Geometry Dash Meltdown uses the same one-button control system as the original. Press spacebar, click the mouse, or tap the screen to jump. Your character moves automatically, and you need to time your jumps perfectly to avoid obstacles and complete each level. The fundamental mechanics are familiar, but the new level designs provide fresh challenges.</p>
           
-          <h2>Game Modes and Character Forms</h2>
+          <h2 id="game-modes">Game Modes and Character Forms</h2>
           <p>Like the original, Meltdown features multiple game modes. Your character transforms between different forms—cube, ship, ball, UFO, wave, and more—each with unique physics and controls. Mastering each form is key to beating the challenging levels in Meltdown. Each form behaves differently, requiring different strategies and timing.</p>
           
-          <h2>The Cube Form in Meltdown</h2>
+          <h2 id="cube-form">The Cube Form in Meltdown</h2>
           <p>The cube is your default form and the most straightforward to control. It jumps over obstacles with standard gravity physics. In Meltdown, the cube form is used in many levels, so mastering it is essential for progression.</p>
           
-          <h2>Advanced Forms in Meltdown</h2>
+          <h2 id="advanced-forms">Advanced Forms in Meltdown</h2>
           <p>Meltdown introduces challenging uses of the ship, ball, UFO, and wave forms. These forms require precise timing and control. The levels are designed to teach you how to use each form effectively through practice and repetition.</p>
           
-          <h2>Difficulty and Progression</h2>
+          <h2 id="difficulty">Difficulty and Progression</h2>
           <p>Geometry Dash Meltdown offers a good difficulty curve. Early levels teach you the basics and introduce new mechanics gradually. As you progress, the challenges become more intense, requiring precise timing and pattern memorization. The difficulty ramps up faster than in the original game, making it suitable for experienced players.</p>
           
-          <h2>Level Design Philosophy</h2>
+          <h2 id="level-design">Level Design Philosophy</h2>
           <p>Each level in Meltdown is carefully designed to be challenging but fair. The levels teach you specific skills and mechanics that you'll need for later stages. The progression is logical, with each new level building on what you've learned previously.</p>
           
-          <h2>Practice Mode Strategy</h2>
+          <h2 id="practice-mode">Practice Mode Strategy</h2>
           <p>Stuck on a difficult section? Use practice mode to place checkpoints and practice specific parts of a level without restarting from the beginning. This feature is essential for learning tough sequences and improving your consistency. Spend time in practice mode to build muscle memory and understand level patterns.</p>
           
-          <h2>Customization and Unlockables</h2>
+          <h2 id="customization">Customization and Unlockables</h2>
           <p>As you progress through Meltdown, unlock new icons, colors, and visual customization options. Personalize your character to make it uniquely yours while you master the challenging levels. The dark theme of Meltdown makes the customization options feel especially striking.</p>
           
-          <h2>Tips for Mastering Geometry Dash Meltdown</h2>
+          <h2 id="tips">Tips for Mastering Geometry Dash Meltdown</h2>
           <ul>
             <li>Listen carefully to the music—obstacles sync with the beat perfectly</li>
             <li>Don't rush; focus on consistency and accuracy over speed</li>
@@ -137,7 +164,7 @@ const gameSchema = {
             <li>Remember that each failure teaches you something valuable</li>
           </ul>
           
-          <h2>Comparing Meltdown to the Original</h2>
+          <h2 id="comparing">Comparing Meltdown to the Original</h2>
           <p>While Meltdown uses the same core mechanics as the original Geometry Dash, it offers a completely different experience. The new levels, music, and visual theme create a fresh challenge. If you're looking for more Geometry Dash content after beating the original, Meltdown is exactly what you need.</p>
           
           <h2>Community and Feedback</h2>
@@ -146,7 +173,7 @@ const gameSchema = {
           <h2>Free to Play Online</h2>
           <p>Geometry Dash Meltdown is completely free to play on geometrydash.ie. No downloads, no registration, and no hidden costs. Just open your browser and start playing instantly. The game loads quickly and runs smoothly on any modern browser.</p>
           
-          <h2>Frequently Asked Questions</h2>
+          <h2 id="faq">Frequently Asked Questions</h2>
           
           <h3>Is Geometry Dash Meltdown harder than the original?</h3>
           <p>Meltdown offers a similar difficulty range to the original, but the levels are designed differently. Some players find it harder, while others find it easier—it depends on your playstyle and skills.</p>

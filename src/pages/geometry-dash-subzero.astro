@@ -11,6 +11,23 @@ const breadcrumbItems = [
   { name: 'Geometry Dash SubZero', url: '/geometry-dash-subzero/' }
 ];
 
+const tableOfContents = [
+  { id: "what-is-geometry-dash-subzero", title: "What is Geometry Dash SubZero?" },
+  { id: "winter-theme-features", title: "Winter Theme Features" },
+  { id: "gameplay-experience", title: "Gameplay Experience" },
+  { id: "level-design", title: "Level Design and Atmosphere" },
+  { id: "game-modes", title: "Game Modes and Transformations" },
+  { id: "cube-form", title: "The Cube Form in Winter" },
+  { id: "advanced-forms", title: "Advanced Forms in SubZero" },
+  { id: "practice-mode", title: "Practice Mode for Learning" },
+  { id: "customization", title: "Customization Options" },
+  { id: "why-play", title: "Why Play Geometry Dash SubZero?" },
+  { id: "winter-gaming", title: "Perfect for Winter Gaming" },
+  { id: "difficulty", title: "Difficulty and Progression" },
+  { id: "tips", title: "Tips for Success in SubZero" },
+  { id: "faq", title: "Frequently Asked Questions" }
+];
+
 const gameSchema = {
   "@context": "https://schema.org",
   "@type": "VideoGame",
@@ -69,6 +86,16 @@ const gameSchema = {
           </div>
         </header>
 
+        <!-- TABLE OF CONTENTS -->
+        <nav class="table-of-contents" aria-label="Article Table of Contents">
+          <h2>Table of Contents</h2>
+          <ol class="toc-list">
+            {tableOfContents.map((item) => (
+              <li><a href={`#${item.id}`}>{item.title}</a></li>
+            ))}
+          </ol>
+        </nav>
+
         <!-- GAME IFRAME SECTION -->
         <section class="game-iframe-section">
           <GameIframe 
@@ -79,15 +106,15 @@ const gameSchema = {
         </section>
         
         <section class="article-content">
-          <h2>What is Geometry Dash SubZero?</h2>
+          <h2 id="what-is-geometry-dash-subzero">What is Geometry Dash SubZero?</h2>
           <p>Geometry Dash SubZero is a winter-themed spin-off of the original Geometry Dash. It features icy levels with a cool visual theme, unique music tracks, and the same addictive rhythm-platformer gameplay. If you love the original game and want a fresh seasonal experience, SubZero is perfect for you. The winter aesthetic transforms the familiar gameplay into something that feels entirely new.</p>
 
           <figure class="article-image">
-            <img src="/assets/covers/geometrydash-subzero-cover.png" alt="Geometry Dash SubZero Gameplay - Winter Theme with Icy Obstacles" width="800" height="450" loading="lazy" />
+            <img src="/assets/covers/geometry-dash-subzero-gameplay-screenshot-winter-theme.png" alt="Geometry Dash SubZero Gameplay - Winter Theme with Icy Obstacles" width="800" height="450" loading="lazy" />
             <figcaption>Geometry Dash SubZero features a stunning winter-themed aesthetic with icy visuals</figcaption>
           </figure>
           
-          <h2>Winter Theme Features</h2>
+          <h2 id="winter-theme-features">Winter Theme Features</h2>
           <p>SubZero stands out from other Geometry Dash games with its carefully crafted winter aesthetic. Every visual element has been designed to create a cohesive icy atmosphere that enhances the gameplay experience.</p>
           
           <ul>
@@ -99,37 +126,37 @@ const gameSchema = {
             <li><strong>Atmospheric Effects:</strong> Visual effects that enhance the winter atmosphere without affecting performance</li>
           </ul>
           
-          <h2>Gameplay Experience</h2>
+          <h2 id="gameplay-experience">Gameplay Experience</h2>
           <p>Geometry Dash SubZero maintains the core one-button control system. Press spacebar, click the mouse, or tap the screen to jump. Your character automatically moves forward, and you need to time your jumps perfectly to navigate through the icy obstacles and complete each level. The fundamental gameplay is familiar, but the new level designs provide fresh challenges.</p>
           
-          <h2>Level Design and Atmosphere</h2>
+          <h2 id="level-design">Level Design and Atmosphere</h2>
           <p>The levels in SubZero are specifically designed with the winter theme in mind. Expect frozen platforms, icy spikes, and obstacles that fit the cool aesthetic. The difficulty progression is well-balanced, starting easy and gradually introducing more complex challenges. Each level feels like a journey through a frozen landscape.</p>
           
-          <h2>Game Modes and Transformations</h2>
+          <h2 id="game-modes">Game Modes and Transformations</h2>
           <p>Like other Geometry Dash games, SubZero features multiple game modes. Your character transforms into different forms—cube, ship, ball, UFO, wave, and more. Each form has unique physics and controls, adding variety to the gameplay and keeping things fresh throughout the game. Learning how each form works is essential for progression.</p>
           
-          <h2>The Cube Form in Winter</h2>
+          <h2 id="cube-form">The Cube Form in Winter</h2>
           <p>The cube is your default form and the most straightforward to control. In SubZero, the cube form is used extensively in the early and mid-game levels, making it essential to master for progression.</p>
           
-          <h2>Advanced Forms in SubZero</h2>
+          <h2 id="advanced-forms">Advanced Forms in SubZero</h2>
           <p>SubZero introduces challenging uses of the ship, ball, UFO, and wave forms. These forms require precise timing and control. The winter-themed levels are designed to teach you how to use each form effectively through practice and repetition.</p>
           
-          <h2>Practice Mode for Learning</h2>
+          <h2 id="practice-mode">Practice Mode for Learning</h2>
           <p>Struggling with a difficult section? Use practice mode to place checkpoints and practice specific parts without restarting from the beginning. This feature is crucial for learning tough sequences and improving your consistency. The winter-themed levels can be challenging, so practice mode is essential.</p>
           
-          <h2>Customization Options</h2>
+          <h2 id="customization">Customization Options</h2>
           <p>As you progress through SubZero, unlock new icons, colors, and customization options. Make your character unique with winter-themed skins and visual effects that fit the icy aesthetic. The customization options in SubZero have a distinctly wintry feel.</p>
           
-          <h2>Why Play Geometry Dash SubZero?</h2>
+          <h2 id="why-play">Why Play Geometry Dash SubZero?</h2>
           <p>If you're looking for a fresh take on Geometry Dash with a unique visual theme, SubZero delivers. The winter aesthetic is beautifully executed, the music is catchy, and the levels offer a good challenge for both newcomers and experienced players. It's a great addition to the Geometry Dash franchise that feels distinct from the original.</p>
           
-          <h2>Perfect for Winter Gaming</h2>
+          <h2 id="winter-gaming">Perfect for Winter Gaming</h2>
           <p>SubZero is perfect for playing during winter months or whenever you want a seasonal gaming experience. The icy theme creates a unique atmosphere that sets it apart from other Geometry Dash games. Even outside of winter, the beautiful aesthetic makes it worth playing.</p>
           
-          <h2>Difficulty and Progression</h2>
+          <h2 id="difficulty">Difficulty and Progression</h2>
           <p>SubZero offers a good difficulty curve suitable for both new and experienced players. Early levels teach you the basics with simple jumps and straightforward obstacles. As you progress, new mechanics are introduced and the challenges become more intense. The difficulty ramps up gradually, ensuring a smooth learning curve.</p>
           
-          <h2>Tips for Success in SubZero</h2>
+          <h2 id="tips">Tips for Success in SubZero</h2>
           <ul>
             <li>Pay attention to the icy visual cues for upcoming obstacles</li>
             <li>Listen to the winter-themed music to anticipate level patterns</li>
@@ -149,7 +176,7 @@ const gameSchema = {
           <h2>Free to Play Online</h2>
           <p>Geometry Dash SubZero is completely free to play on geometrydash.ie. No downloads, no registration, and no costs. Just open your browser and start your icy adventure instantly. The game loads quickly and runs smoothly on any modern browser.</p>
           
-          <h2>Frequently Asked Questions</h2>
+          <h2 id="faq">Frequently Asked Questions</h2>
           
           <h3>Is Geometry Dash SubZero harder than the original?</h3>
           <p>SubZero offers a similar difficulty range to the original, but the levels are designed differently. The winter-themed obstacles provide unique challenges that some players find easier or harder depending on their playstyle.</p>
