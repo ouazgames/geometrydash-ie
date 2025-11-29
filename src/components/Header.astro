@@ -29,8 +29,8 @@ const currentPath = Astro.url.pathname;
             <li><a href="/geometry-dash-breeze/">Geometry Dash Breeze</a></li>
           </ul>
         </li>
-        <li><a href="/#new-games">New Games</a></li>
-        <li><a href="/#geometry-games">Geometry Games</a></li>
+        <li><a href="/c/new-games/" class={currentPath.startsWith('/c/new-games') ? 'active' : ''}>New Games</a></li>
+        <li><a href="/c/geometry-dash-games/" class={currentPath.startsWith('/c/geometry-dash-games') ? 'active' : ''}>Geometry Dash Games</a></li>
       </ul>
     </nav>
   </div>
