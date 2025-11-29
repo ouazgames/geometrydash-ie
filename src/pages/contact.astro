@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Contact', url: '/contact/' }
+];
+---
+
+<BaseLayout
+  title="Contact Us – Geometry Dash IE"
+  description="Get in touch with Geometry Dash IE. We'd love to hear from you about feedback, issues, or inquiries."
+  keywords="contact, support, feedback, inquiries"
+>
+  <Header />
+  
+  <main id="main-content">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbItems} />
+      
+      <article class="contact-page">
+        <header class="page-header">
+          <h1>Contact Us</h1>
+          <p class="intro">We'd love to hear from you! Whether you have questions, feedback, or need support, feel free to reach out.</p>
+        </header>
+        
+        <section class="contact-content">
+          <h2>Get in Touch</h2>
+          <p>Have a question about Geometry Dash or our website? Want to report a bug? Or just want to say hello? We're here to help!</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <h3>📧 Email</h3>
+              <p>For general inquiries and support:</p>
+              <p><a href="mailto:support@geometrydash.ie">support@geometrydash.ie</a></p>
+            </div>
+            
+            <div class="contact-method">
+              <h3>🔒 Privacy & Legal</h3>
+              <p>For privacy-related questions:</p>
+              <p><a href="mailto:privacy@geometrydash.ie">privacy@geometrydash.ie</a></p>
+            </div>
+            
+            <div class="contact-method">
+              <h3>⚖️ DMCA & Copyright</h3>
+              <p>For copyright and DMCA notices:</p>
+              <p><a href="mailto:dmca@geometrydash.ie">dmca@geometrydash.ie</a></p>
+            </div>
+          </div>
+          
+          <h2>Frequently Asked Questions</h2>
+          
+          <h3>How do I play Geometry Dash on geometrydash.ie?</h3>
+          <p>Simply visit our website, select a game from the menu, and click play. The game will load in your browser. Use spacebar, mouse click, or arrow keys to jump. No download or registration required!</p>
+          
+          <h3>Is Geometry Dash free to play?</h3>
+          <p>Yes! All games on geometrydash.ie are completely free to play. There are no hidden fees or premium content. Just open and play!</p>
+          
+          <h3>Can I save my progress?</h3>
+          <p>Your progress is saved locally in your browser. If you clear your browser cache or use a different browser, you may lose your progress. For the full Geometry Dash game on mobile or PC, you can create an account to sync progress across devices.</p>
+          
+          <h3>What games are available?</h3>
+          <p>We offer several Geometry Dash games including:</p>
+          <ul>
+            <li><a href="/">Geometry Dash</a></li>
+            <li><a href="/geometry-dash-lite/">Geometry Dash Lite</a></li>
+            <li><a href="/geometry-dash-meltdown/">Geometry Dash Meltdown</a></li>
+            <li><a href="/geometry-dash-subzero/">Geometry Dash SubZero</a></li>
+            <li><a href="/geometry-dash-breeze/">Geometry Dash Breeze</a></li>
+          </ul>
+          
+          <h3>The game isn't loading. What should I do?</h3>
+          <p>Try the following:</p>
+          <ul>
+            <li>Refresh the page (F5 or Cmd+R)</li>
+            <li>Clear your browser cache</li>
+            <li>Try a different browser</li>
+            <li>Check your internet connection</li>
+            <li>Disable browser extensions that might block content</li>
+          </ul>
+          
+          <h3>Is Geometry Dash IE affiliated with RobTop Games?</h3>
+          <p>No, Geometry Dash IE is an unofficial fan site. We are not affiliated with, endorsed by, or connected to RobTop Games or the official Geometry Dash game. Geometry Dash is a trademark of RobTop Games.</p>
+          
+          <h3>Can I report a bug or issue?</h3>
+          <p>Yes! If you encounter any bugs or issues while playing, please email us at <a href="mailto:support@geometrydash.ie">support@geometrydash.ie</a> with details about the problem. Include your browser, operating system, and steps to reproduce the issue if possible.</p>
+          
+          <h3>How can I provide feedback?</h3>
+          <p>We love hearing from our users! Send your feedback, suggestions, or ideas to <a href="mailto:support@geometrydash.ie">support@geometrydash.ie</a>. Your input helps us improve the site.</p>
+          
+          <h2>Response Time</h2>
+          <p>We aim to respond to all inquiries within 48 hours. During busy periods, it may take longer. Thank you for your patience!</p>
+          
+          <h2>Follow Us</h2>
+          <p>Stay updated with the latest news and updates:</p>
+          <div class="social-links">
+            <a href="https://twitter.com/geometrydash" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://facebook.com/geometrydash" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://youtube.com/geometrydash" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .page-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(74, 246, 38, 0.5);
+  }
+
+  .intro {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .contact-content {
+    line-height: 1.8;
+  }
+
+  .contact-content h2 {
+    color: var(--cyan);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--purple);
+  }
+
+  .contact-content h3 {
+    color: var(--yellow);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-content p {
+    margin-bottom: 1rem;
+  }
+
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+  }
+
+  .contact-method {
+    background: rgba(74, 246, 38, 0.05);
+    border-left: 4px solid var(--neon-green);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-method:hover {
+    transform: translateY(-4px);
+    background: rgba(74, 246, 38, 0.1);
+  }
+
+  .contact-method h3 {
+    margin-top: 0;
+    color: var(--neon-green);
+  }
+
+  .contact-method p {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-content a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-content a:hover {
+    color: var(--neon-green);
+    text-decoration: underline;
+  }
+
+  .contact-content ul {
+    margin: 1rem 0 1rem 2rem;
+    padding: 0;
+  }
+
+  .contact-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .social-links a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--neon-green), var(--cyan));
+    color: var(--black);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    transform: translateY(-2px);
+  }
+</style>

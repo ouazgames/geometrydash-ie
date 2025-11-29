@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'DMCA', url: '/dmca/' }
+];
+---
+
+<BaseLayout
+  title="DMCA – Geometry Dash IE"
+  description="Digital Millennium Copyright Act (DMCA) information and copyright claims for geometrydash.ie."
+  keywords="DMCA, copyright, intellectual property"
+>
+  <Header />
+  
+  <main id="main-content">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbItems} />
+      
+      <article class="legal-page">
+        <header class="page-header">
+          <h1>DMCA – Digital Millennium Copyright Act</h1>
+          <p class="last-updated">Last updated: November 29, 2025</p>
+        </header>
+        
+        <section class="legal-content">
+          <h2>Copyright Notice</h2>
+          <p>Geometry Dash IE respects the intellectual property rights of others and expects users of the geometrydash.ie website to do the same. In accordance with the Digital Millennium Copyright Act (DMCA) and other applicable laws, we have adopted a policy of terminating, in appropriate circumstances and at our sole discretion, users who are deemed to be repeat infringers.</p>
+          
+          <h2>Reporting Copyright Infringement</h2>
+          <p>If you believe that content on geometrydash.ie infringes upon your copyright, please provide us with a written notice that includes the following information:</p>
+          <ul>
+            <li>Your physical or electronic signature</li>
+            <li>Identification of the copyrighted work(s) claimed to have been infringed</li>
+            <li>Identification of the material on our website that is claimed to be infringing and information reasonably sufficient to permit us to locate the material</li>
+            <li>Your name, address, telephone number, and email address</li>
+            <li>A statement that you have a good faith belief that the use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law</li>
+            <li>Your statement that the information in the notice is accurate, and under penalty of perjury, that you are authorized to act on behalf of the copyright owner</li>
+          </ul>
+          
+          <h2>Submitting a DMCA Notice</h2>
+          <p>Please send your DMCA notice to:</p>
+          <ul>
+            <li><strong>Email:</strong> dmca@geometrydash.ie</li>
+            <li><strong>Mailing Address:</strong><br />
+              Geometry Dash IE<br />
+              Copyright Agent<br />
+              Ireland
+            </li>
+          </ul>
+          
+          <h2>Counter-Notification</h2>
+          <p>If you believe that material you submitted has been wrongly removed or disabled, you may submit a counter-notification to us. Your counter-notification should include:</p>
+          <ul>
+            <li>Your physical or electronic signature</li>
+            <li>Identification of the material that has been removed or to which access has been disabled and the location at which the material appeared before it was removed or disabled</li>
+            <li>A statement under penalty of perjury that you have a good faith belief that the material was removed or disabled as a result of mistake or misidentification of the material to be removed or disabled</li>
+            <li>Your name, address, and telephone number, and a statement that you consent to the jurisdiction of Federal District Court for the judicial district in which the address is located, or if your address is outside of the United States, for any judicial district in which Geometry Dash IE may be found</li>
+            <li>A statement that you will accept service of process from the person who provided the original DMCA notification or an agent of such person</li>
+          </ul>
+          
+          <h2>Repeat Infringers</h2>
+          <p>Geometry Dash IE will, in appropriate circumstances and at our sole discretion, terminate the accounts of users who are deemed to be repeat infringers of intellectual property rights.</p>
+          
+          <h2>Third-Party Content</h2>
+          <p>Geometry Dash IE does not host or create content that infringes on third-party intellectual property rights. We provide a platform for users to access games and content. If you believe content on our website infringes your rights, please contact us immediately using the information above.</p>
+          
+          <h2>Geometry Dash Trademark</h2>
+          <p>Geometry Dash is a trademark of RobTop Games. Geometry Dash IE is an unofficial fan site and is not affiliated with, endorsed by, or connected to RobTop Games or the official Geometry Dash game. We respect all intellectual property rights and acknowledge that Geometry Dash is the property of its creators.</p>
+          
+          <h2>Contact Information</h2>
+          <p>For any DMCA-related inquiries, please contact us at:</p>
+          <ul>
+            <li>Email: dmca@geometrydash.ie</li>
+            <li>Website: <a href="/contact/">Contact Us</a></li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .page-header {
+    margin-bottom: 3rem;
+  }
+
+  .page-header h1 {
+    color: var(--neon-green);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(74, 246, 38, 0.5);
+  }
+
+  .last-updated {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .legal-content {
+    line-height: 1.8;
+  }
+
+  .legal-content h2 {
+    color: var(--cyan);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--purple);
+  }
+
+  .legal-content p {
+    margin-bottom: 1rem;
+  }
+
+  .legal-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .legal-content li {
+    margin-bottom: 0.75rem;
+  }
+
+  .legal-content a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .legal-content a:hover {
+    color: var(--neon-green);
+    text-decoration: underline;
+  }
+</style>

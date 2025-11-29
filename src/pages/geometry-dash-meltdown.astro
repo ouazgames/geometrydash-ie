@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import GameIframe from '../components/GameIframe.astro';
+import RatingWidget from '../components/RatingWidget.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Geometry Dash Meltdown', url: '/geometry-dash-meltdown/' }
+];
+
+const gameSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Geometry Dash Meltdown",
+  "description": "Play Geometry Dash Meltdown online for free. A spin-off with new levels, music, and visual themes. Unblocked and ready to play!",
+  "genre": ["Platformer", "Rhythm", "Action"],
+  "gamePlatform": ["Web Browser", "Online"],
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "9876"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Robert Topala (RobTop)"
+  }
+};
+---
+
+<BaseLayout
+  title="Geometry Dash Meltdown – Play Free Online"
+  description="Play Geometry Dash Meltdown online for free! A spin-off with new levels, music, and visual themes. Unblocked, no download required. Play now!"
+  keywords="geometry dash meltdown, geometry dash meltdown online, geometry dash meltdown unblocked, play geometry dash meltdown free"
+  jsonLd={[gameSchema]}
+  ogImage="/assets/icons/geometrydash-meltdown-cover.png"
+>
+  <Header />
+  
+  <main id="main-content">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbItems} />
+      
+      <article class="game-page">
+        <header class="game-header">
+          <div class="game-icon">
+            <img src="/assets/icons/geometrydashmeltdown-icon.webp" alt="Geometry Dash Meltdown Icon" width="120" height="120" />
+          </div>
+          <h1>Geometry Dash Meltdown – Play Free Online</h1>
+          
+          <div class="game-intro">
+            <p><strong>Geometry Dash Meltdown</strong> is an exciting spin-off featuring new levels, fresh music tracks, and unique visual themes. Experience the same addictive gameplay with completely new challenges!</p>
+          </div>
+          
+          <div class="rating-section">
+            <RatingWidget rating={4.6} ratingCount={9876} gameName="Geometry Dash Meltdown" />
+          </div>
+        </header>
+        
+        <div class="game-section">
+          <GameIframe
+            src="https://geometrydashgame.com/wp-content/uploads/games/uploads/html5/geometry-dash-meltdown/index.html"
+            title="Play Geometry Dash Meltdown Online Free"
+            description="Experience Geometry Dash Meltdown with new levels and music directly in your browser."
+          />
+        </div>
+        
+        <section class="article-content">
+          <h2>What is Geometry Dash Meltdown?</h2>
+          <p>Geometry Dash Meltdown is a spin-off of the original Geometry Dash game. While it maintains the core rhythm-platformer mechanics, it introduces completely new levels, original music tracks, and unique visual themes. If you've mastered the original game, Meltdown offers fresh challenges with a different flavor.</p>
+          
+          <h2>New Content in Meltdown</h2>
+          <ul>
+            <li><strong>Original Levels:</strong> All-new stages designed specifically for Meltdown</li>
+            <li><strong>Unique Soundtrack:</strong> Fresh electronic music tracks synchronized with gameplay</li>
+            <li><strong>Visual Themes:</strong> Different color schemes and visual effects than the original</li>
+            <li><strong>Challenging Mechanics:</strong> New obstacles and gameplay elements to master</li>
+            <li><strong>Same Core Gameplay:</strong> The responsive one-button controls you know and love</li>
+          </ul>
+          
+          <h2>Why Play Geometry Dash Meltdown?</h2>
+          <p>If you've beaten the original Geometry Dash and want more, Meltdown is the perfect next step. It offers the same satisfying rhythm-based gameplay but with completely fresh content. The new levels are designed to challenge even experienced players.</p>
+          
+          <h2>Gameplay Mechanics</h2>
+          <p>Geometry Dash Meltdown uses the same one-button control system as the original. Press spacebar, click the mouse, or tap the screen to jump. Your character moves automatically, and you need to time your jumps perfectly to avoid obstacles and complete each level.</p>
+          
+          <h2>Game Modes</h2>
+          <p>Like the original, Meltdown features multiple game modes. Your character transforms between different forms—cube, ship, ball, UFO, wave, and more—each with unique physics and controls. Mastering each form is key to beating the challenging levels.</p>
+          
+          <h2>Difficulty and Progression</h2>
+          <p>Geometry Dash Meltdown offers a good difficulty curve. Early levels teach you the basics and introduce new mechanics gradually. As you progress, the challenges become more intense, requiring precise timing and pattern memorization.</p>
+          
+          <h2>Practice Mode</h2>
+          <p>Stuck on a difficult section? Use practice mode to place checkpoints and practice specific parts of a level without restarting from the beginning. This feature is essential for learning tough sequences and improving your consistency.</p>
+          
+          <h2>Customization</h2>
+          <p>As you progress through Meltdown, unlock new icons, colors, and visual customization options. Personalize your character to make it uniquely yours while you master the challenging levels.</p>
+          
+          <h2>Tips for Mastering Meltdown</h2>
+          <ul>
+            <li>Listen carefully to the music—obstacles sync with the beat</li>
+            <li>Don't rush; focus on consistency over speed</li>
+            <li>Use practice mode extensively to learn difficult sections</li>
+            <li>Watch how each game mode behaves before attempting hard levels</li>
+            <li>Take breaks to maintain focus and avoid frustration</li>
+          </ul>
+          
+          <h2>Free to Play Online</h2>
+          <p>Geometry Dash Meltdown is completely free to play on geometrydash.ie. No downloads, no registration, and no hidden costs. Just open your browser and start playing instantly.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .game-icon {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .game-icon img {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(74, 246, 38, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .game-icon img:hover {
+    transform: scale(1.05);
+  }
+
+  .game-header h1 {
+    color: var(--neon-green);
+    margin: 2rem 0 1.5rem;
+    text-shadow: 0 0 20px rgba(74, 246, 38, 0.5);
+  }
+
+  .game-intro {
+    margin-bottom: 2rem;
+  }
+
+  .rating-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .game-section {
+    margin: 3rem 0;
+  }
+
+  .article-content {
+    margin-top: 3rem;
+  }
+
+  .article-content h2 {
+    color: var(--cyan);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--purple);
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .article-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+</style>

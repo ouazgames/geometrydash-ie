@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import GameIframe from '../components/GameIframe.astro';
+import RatingWidget from '../components/RatingWidget.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Geometry Dash SubZero', url: '/geometry-dash-subzero/' }
+];
+
+const gameSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Geometry Dash SubZero",
+  "description": "Play Geometry Dash SubZero online for free. A winter-themed spin-off with icy levels and cool music. Unblocked and ready to play!",
+  "genre": ["Platformer", "Rhythm", "Action"],
+  "gamePlatform": ["Web Browser", "Online"],
+  "applicationCategory": "Game",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "11234"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Robert Topala (RobTop)"
+  }
+};
+---
+
+<BaseLayout
+  title="Geometry Dash SubZero – Play Free Online"
+  description="Play Geometry Dash SubZero online for free! A winter-themed spin-off with icy levels and cool music. Unblocked, no download required. Play now!"
+  keywords="geometry dash subzero, geometry dash subzero online, geometry dash subzero unblocked, play geometry dash subzero free"
+  jsonLd={[gameSchema]}
+  ogImage="/assets/icons/geometrydash-subzero-cover.png"
+>
+  <Header />
+  
+  <main id="main-content">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbItems} />
+      
+      <article class="game-page">
+        <header class="game-header">
+          <div class="game-icon">
+            <img src="/assets/icons/geometrydashSUBZERO-ICON.webp" alt="Geometry Dash SubZero Icon" width="120" height="120" />
+          </div>
+          <h1>Geometry Dash SubZero – Play Free Online</h1>
+          
+          <div class="game-intro">
+            <p><strong>Geometry Dash SubZero</strong> brings a winter wonderland of challenges with icy-themed levels and cool music. Jump through frozen obstacles and master the rhythm in this frosty spin-off!</p>
+          </div>
+          
+          <div class="rating-section">
+            <RatingWidget rating={4.7} ratingCount={11234} gameName="Geometry Dash SubZero" />
+          </div>
+        </header>
+        
+        <div class="game-section">
+          <GameIframe
+            src="https://geometrydashgame.com/wp-content/uploads/games/uploads/html5/geometry-dash-subzero/index.html"
+            title="Play Geometry Dash SubZero Online Free"
+            description="Experience Geometry Dash SubZero with winter-themed levels and music directly in your browser."
+          />
+        </div>
+        
+        <section class="article-content">
+          <h2>What is Geometry Dash SubZero?</h2>
+          <p>Geometry Dash SubZero is a winter-themed spin-off of the original Geometry Dash. It features icy levels with a cool visual theme, unique music tracks, and the same addictive rhythm-platformer gameplay. If you love the original game and want a fresh seasonal experience, SubZero is perfect for you.</p>
+          
+          <h2>Winter Theme Features</h2>
+          <ul>
+            <li><strong>Icy Visual Design:</strong> Cool blue and white color schemes with winter aesthetics</li>
+            <li><strong>Frozen Levels:</strong> Levels designed with ice and snow-themed obstacles</li>
+            <li><strong>Cool Soundtrack:</strong> Original music tracks with a winter vibe</li>
+            <li><strong>Seasonal Challenges:</strong> Unique mechanics and obstacles fit for the theme</li>
+            <li><strong>Smooth Gameplay:</strong> The same responsive controls you love</li>
+          </ul>
+          
+          <h2>Gameplay Experience</h2>
+          <p>Geometry Dash SubZero maintains the core one-button control system. Press spacebar, click the mouse, or tap the screen to jump. Your character automatically moves forward, and you need to time your jumps perfectly to navigate through the icy obstacles and complete each level.</p>
+          
+          <h2>Level Design</h2>
+          <p>The levels in SubZero are specifically designed with the winter theme in mind. Expect frozen platforms, icy spikes, and obstacles that fit the cool aesthetic. The difficulty progression is well-balanced, starting easy and gradually introducing more complex challenges.</p>
+          
+          <h2>Game Modes and Transformations</h2>
+          <p>Like other Geometry Dash games, SubZero features multiple game modes. Your character transforms into different forms—cube, ship, ball, UFO, wave, and more. Each form has unique physics and controls, adding variety to the gameplay and keeping things fresh throughout the game.</p>
+          
+          <h2>Practice Mode</h2>
+          <p>Struggling with a difficult section? Use practice mode to place checkpoints and practice specific parts without restarting from the beginning. This feature is crucial for learning tough sequences and improving your consistency.</p>
+          
+          <h2>Customization Options</h2>
+          <p>As you progress through SubZero, unlock new icons, colors, and customization options. Make your character unique with winter-themed skins and visual effects that fit the icy aesthetic.</p>
+          
+          <h2>Why Play Geometry Dash SubZero?</h2>
+          <p>If you're looking for a fresh take on Geometry Dash with a unique visual theme, SubZero delivers. The winter aesthetic is beautifully executed, the music is catchy, and the levels offer a good challenge for both newcomers and experienced players. It's a great addition to the Geometry Dash franchise.</p>
+          
+          <h2>Tips for Success</h2>
+          <ul>
+            <li>Pay attention to the icy visual cues for upcoming obstacles</li>
+            <li>Listen to the winter-themed music to anticipate level patterns</li>
+            <li>Use practice mode to master the unique mechanics</li>
+            <li>Don't rush—focus on consistent, accurate jumps</li>
+            <li>Take breaks to maintain focus and avoid frustration</li>
+          </ul>
+          
+          <h2>Free to Play Online</h2>
+          <p>Geometry Dash SubZero is completely free to play on geometrydash.ie. No downloads, no registration, and no costs. Just open your browser and start your icy adventure instantly.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .game-icon {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .game-icon img {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(74, 246, 38, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .game-icon img:hover {
+    transform: scale(1.05);
+  }
+
+  .game-header h1 {
+    color: var(--neon-green);
+    margin: 2rem 0 1.5rem;
+    text-shadow: 0 0 20px rgba(74, 246, 38, 0.5);
+  }
+
+  .game-intro {
+    margin-bottom: 2rem;
+  }
+
+  .rating-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .game-section {
+    margin: 3rem 0;
+  }
+
+  .article-content {
+    margin-top: 3rem;
+  }
+
+  .article-content h2 {
+    color: var(--cyan);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--purple);
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .article-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+</style>
