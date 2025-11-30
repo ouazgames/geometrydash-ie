@@ -73,6 +73,9 @@ User-agent: Slackbot
 Allow: /
 
 # Sitemaps
+# Primary sitemap with custom priorities
+Sitemap: https://geometrydash.ie/sitemap.xml
+# Sitemap index (includes manual + auto-generated)
 Sitemap: https://geometrydash.ie/sitemap-index.xml
+# Auto-generated Astro sitemaps (backup)
 Sitemap: https://geometrydash.ie/sitemap-0.xml
-Sitemap: https://geometrydash.ie/sitemap-1.xml
